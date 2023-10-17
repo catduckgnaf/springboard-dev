@@ -1,5 +1,5 @@
 {
-    "name": "Python Springboard Dev",
+    "name": "Springboard Dev",
     "build": {
         "dockerfile": "./Dockerfile",
         "context": "."
