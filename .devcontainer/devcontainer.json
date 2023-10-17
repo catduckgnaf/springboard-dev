@@ -32,6 +32,6 @@
         }
     },
     "forwardPorts": [5000],
-    "postCreateCommand": "uname -a",
+    "postCreateCommand": "sh",
     "remoteUser": "vscode"
 }
