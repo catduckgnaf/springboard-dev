@@ -1,46 +1,67 @@
-# Ubuntu
+# GitHub Codespaces & Dev Container ♥️ Springboard
 
-## Summary
+Welcome to your shiny new Codespace and dev container for Springboard!
 
-*A simple Ubuntu container with Git and other common utilities installed.*
+I created this, with the correct dependancies, versions, and requirements. Because I was switching between 5+ different machines during coursework. In addition to other projects. 
 
-| Metadata | Value |  
-|----------|-------|
-| *Categories* | Core, Other |
-| *Image type* | Dockerfile |
-| *Published images* | mcr.microsoft.com/devcontainers/base:ubuntu |
-| *Available image variants* | ubuntu-22.04 / jammy, ubuntu-20.04 / focal ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
-| *Published image architecture(s)* | x86-64, aarch64/arm64 for `ubuntu-22.04` (`jammy`) variant  |
-| *Container host OS support* | Linux, macOS, Windows |
-| *Container OS* | Ubuntu |
-| *Languages, platforms* | Any |
+Code from anywhere, install all the useful vs code extensions and settings  
 
-See **[history](history)** for information on the contents of published images.
+Use in browser for when all you kids who thought you were cool using a mac lose access to vs code
 
-## Using this image
+but in the mean time, you can also open in vs code. more instructions unlikely to come.
 
-You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
+I plan to add starter code for various languages, tips and hints  
 
-- `mcr.microsoft.com/devcontainers/base:ubuntu` (latest LTS release)
-- `mcr.microsoft.com/devcontainers/base:ubuntu-22.04` (or `jammy`)
-- `mcr.microsoft.com/devcontainers/base:ubuntu-20.04` (or `focal`)
+# Getting Started:
 
-Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
+I mean really if you don't know how to do these next steps, you should probably just quit and work and wendys.
 
-You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
+See that green button at the top right of this text that says code? Yea click that
+Now click on codespaces
+You will see current branch springboard-dev (unless I renamed the branch and didn't update the readme)
+To the right click on the three dots, then "open in"
+You can choose to open in browser, which is really cool! 
+Or you can open in VS Code. Where it will set up everything for you!! You will have a complete development envirement.
+You will have all the awesome extensions, correct versions of everything, some starter code, and very likely unhelpful sarcasm buried somewhere.
 
-- `mcr.microsoft.com/devcontainers/base:1-jammy`
-- `mcr.microsoft.com/devcontainers/base:1.0-jammy`
-- `mcr.microsoft.com/devcontainers/base:1.0.0-jammy`
 
-See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/base/tags/list).
+# Features:
 
-Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
+## HTML  CSS  Javascript 
 
-Beyond `git`, this image / `Dockerfile` includes `zsh`, [Oh My Zsh!](https://ohmyz.sh/), a non-root `vscode` user with `sudo` access, and a set of common dependencies for development.
+Here we have some basic templates for getting started with what I like to call the unholy trinity. (can you tell I don't like front end?)
 
-## License
+## Python
 
-Copyright (c) Microsoft Corporation. All rights reserved.
+Every cool kids favorite langauge.
+Don't drive yourself crazy with venv and differnet machines and setting up envirements just for a 1 hour code exercise. 
+Yes learning this is important, but you shouldn't need to spend 8 hours setting up a dev envirement for 2 hour code project
+Some fun extensions such as running doctests right inside VS code.
 
-Licensed under the MIT License. See [LICENSE](https://github.com/devcontainers/images/blob/main/LICENSE)
+## Flask
+
+I mean, its better then CSS and templates and Jinja are cool right? 
+Even though Flask is on 3.0, springboard still uses 1.x.x. 
+We keepin' it old skool here.
+
+## Postgres 
+
+I haven't added anything here but I will, maybe, someday, PR anyone?
+
+## Node
+
+Hey, this is way better then outdated Jquery, thank you springboard!
+
+## Git
+
+yea, you get that extension too
+
+# Do I take donations?
+
+Absolutely, I am jewish. and who doesn't love a coupon? So if you found this page and you HAVEN'T yet signed up for springboard, if you use my referall link you will get a discount.
+So basically it is like I am paying you! Better someone giving back to the community then some rando on reddit, (thats who got my referall code)
+100% of all money recieved will go to making sure I can pay github to host codespaces, and if there is extra I will donate it to some open source project that is worthy. 
+
+https://www.springboard.com/invite/F9AJB
+
+
