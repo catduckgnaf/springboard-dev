@@ -34,8 +34,12 @@
                 "yzhang.markdown-all-in-one",
 				"streetsidesoftware.code-spell-checker",
 				"DavidAnson.vscode-markdownlint",
+                "NoahSyn10.pydoctestbtn",
 				"shd101wyy.markdown-preview-enhanced",
-				"bierner.github-markdown-preview"
+				"bierner.github-markdown-preview",
+                "njpwerner.autodocstring",
+                "anseki.vscode-color",
+                "ritwickdey.LiveServer"
 
             ]
         }
