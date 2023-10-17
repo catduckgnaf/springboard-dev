@@ -5,7 +5,6 @@ LABEL dev.containers.features="common"
 
 # [Optional] Uncomment this section to install additional OS packages.
 # COPY .devcontainer/requirements.txt /workspace/
-# RUN if [ -f "requirements.txt" ]; then pip install -r requirements.txt && rm requirements.txt; fi
-
+RUN pip install -r .devcontainer/requirements.txt
 # Set the SHELL environment variable to /bin/bash
 ENV SHELL /bin/bash
