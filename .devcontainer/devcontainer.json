@@ -1,0 +1,37 @@
+{
+    "name": "Python Springboard Dev",
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": "."
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "username": "vscode",
+            "userUid": "1000",
+            "userGid": "1000",
+            "upgradePackages": true
+        },
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.7"
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "18"
+        },
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": false
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "mads-hartmann.bash-ide-vscode",
+                "esbenp.prettier-vscode"
+            ]
+        }
+    },
+    "forwardPorts": [5000],
+    "postCreateCommand": "uname -a",
+    "remoteUser": "vscode"
+}
