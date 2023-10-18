@@ -6,28 +6,24 @@
     },
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
-			"installZsh": true,
-			"installOhMyZsh": true,
-			"installOhMyZshConfig": true,
-			"nonFreePackages": true,
-			"username": "vscode",
-			"userUid": "automatic",
-			"userGid": "automatic"
-		},
+            "installZsh": true,
+            "installOhMyZsh": true,
+            "installOhMyZshConfig": true,
+            "nonFreePackages": true,
+            "username": "vscode",
+            "userUid": "automatic",
+            "userGid": "automatic"
+        },
         "ghcr.io/devcontainers/features/python:1.3.1": {
             "version": "3.7",
             "installTools": true
-
-
         },
-        "ghcr.io/devcontainers/features/git:1": {
-		},
-		"ghcr.io/devcontainers/features/node:1": {
-			"nodeGypDependencies": true,
-			"version": "18",
-			"nvmVersion": "0.39"
-		}
-	
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/node:1": {
+            "nodeGypDependencies": true,
+            "version": "18",
+            "nvmVersion": "0.39"
+        }
     },
     "customizations": {
         "vscode": {
@@ -37,19 +33,18 @@
                 "ms-python.python",
                 "ms-python.vscode-pylance",
                 "yzhang.markdown-all-in-one",
-				"streetsidesoftware.code-spell-checker",
-				"DavidAnson.vscode-markdownlint",
+                "streetsidesoftware.code-spell-checker",
+                "DavidAnson.vscode-markdownlint",
                 "NoahSyn10.pydoctestbtn",
-				"shd101wyy.markdown-preview-enhanced",
-				"bierner.github-markdown-preview",
+                "shd101wyy.markdown-preview-enhanced",
+                "bierner.github-markdown-preview",
                 "njpwerner.autodocstring",
                 "anseki.vscode-color",
                 "ritwickdey.LiveServer"
-
             ]
         }
     },
     "forwardPorts": [5000],
-    "postCreateCommand": "uname -r && python --version && pip install -r .devcontainer/requirements.txt && flask --version && cp .devcontainer/first-run-notice-temp.txt .devcontainer/first-run-notice.txt cat .devcontainer/first-run-notice.txt && rm .devcontainer/first-run-notice.txt  bash",
+    "postCreateCommand": "bash .devcontainer/run.sh",
     "remoteUser": "vscode"
 }

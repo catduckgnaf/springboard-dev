@@ -2,7 +2,3 @@
  You have succesfully installed the Springboard Dev Container. 
    - It includes runtimes and tools for Python, Node.js, Docker, and more. 
    - Correct dependencies and settings, plus some useful extensions for VS Code.
-
-   
-This include all of the correct versions as required
-for the Springboard Software Engineering Coursework. 
