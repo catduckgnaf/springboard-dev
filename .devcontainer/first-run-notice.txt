@@ -1,0 +1,4 @@
+👋 Welcome to Catducks Springboard Dev Containter! You are on our default image. 
+   - It includes runtimes and tools for Python, Node.js, Docker, and more. 
+   
+   It includes all of the correct versions as required to Springboard Software Engineering Coursework. 

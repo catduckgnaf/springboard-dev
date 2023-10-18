@@ -6,12 +6,14 @@
     },
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
-            "installZsh": true,
-            "username": "vscode",
-            "userUid": "1000",
-            "userGid": "1000",
-            "upgradePackages": true
-        },
+			"installZsh": true,
+			"installOhMyZsh": true,
+			"installOhMyZshConfig": true,
+			"nonFreePackages": true,
+			"username": "vscode",
+			"userUid": "automatic",
+			"userGid": "automatic"
+		},
         "ghcr.io/devcontainers/features/python:1.3.0": {
             "version": "3.7",
             "installTools": true
@@ -19,9 +21,15 @@
 
         },
         "ghcr.io/devcontainers/features/git:1": {
-            "version": "latest",
-            "ppa": false
-        }
+			"ppa": true,
+			"version": "os-provided"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"nodeGypDependencies": true,
+			"version": "18",
+			"nvmVersion": "0.39"
+		}
+	
     },
     "customizations": {
         "vscode": {
