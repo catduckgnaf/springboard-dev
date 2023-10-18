@@ -21,8 +21,6 @@
 
         },
         "ghcr.io/devcontainers/features/git:1": {
-			"ppa": true,
-			"version": "os-provided"
 		},
 		"ghcr.io/devcontainers/features/node:1": {
 			"nodeGypDependencies": true,
