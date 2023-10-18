@@ -1,3 +1,6 @@
+# Personal Dev Files
+catuck*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -122,3 +125,19 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+catduck/flask-boggle/app.py
+catduck/flask-boggle/boggle.py
+catduck/flask-boggle/test.py
+catduck/flask-boggle/words.txt
+catduck/prob-divide-conquer/count-zeroes.js
+catduck/prob-divide-conquer/count-zeroes.test.js
+catduck/prob-divide-conquer/find-floor.js
+catduck/prob-divide-conquer/find-floor.test.js
+catduck/prob-divide-conquer/find-rotated-index.js
+catduck/prob-divide-conquer/find-rotated-index.test.js
+catduck/prob-divide-conquer/find-rotation-count.js
+catduck/prob-divide-conquer/find-rotation-count.test.js
+catduck/prob-divide-conquer/jest.config.js
+catduck/prob-divide-conquer/package.json
+catduck/prob-divide-conquer/sorted-frequency.js
+catduck/prob-divide-conquer/sorted-frequency.test.js
