@@ -1,7 +1,8 @@
-👋 Welcome to Catducks Springboard Dev Containter!
- You are the Springboard Dev Container Image. 
+ Welcome to Catducks Springboard Dev Containter!
+ You have succesfully installed the Springboard Dev Container. 
    - It includes runtimes and tools for Python, Node.js, Docker, and more. 
-   - Correct dependencies and settings
+   - Correct dependencies and settings, plus some useful extensions for VS Code.
+
    
-   This include all of the correct versions as required
-   for the Springboard Software Engineering Coursework. 
+This include all of the correct versions as required
+for the Springboard Software Engineering Coursework. 
