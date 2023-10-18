@@ -125,6 +125,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#personal files
 catduck/flask-boggle/app.py
 catduck/flask-boggle/boggle.py
 catduck/flask-boggle/test.py
