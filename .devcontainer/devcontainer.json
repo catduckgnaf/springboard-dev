@@ -52,6 +52,6 @@
         }
     },
     "forwardPorts": [5000],
-    "postCreateCommand": "uname -r && python --version && pip install -r .devcontainer/requirements.txt && flask --version && bash",
+    "postCreateCommand": "uname -r && python --version && pip install -r .devcontainer/requirements.txt && flask --version && cat .devcontainer/first-run-notice.txt && bash",
     "remoteUser": "vscode"
 }
