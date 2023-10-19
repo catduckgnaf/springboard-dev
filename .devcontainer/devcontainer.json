@@ -34,10 +34,7 @@
         "ghcr.io/devcontainers/features/git",
         "ghcr.io/devcontainers/features/node",
         "ghcr.io/devcontainers/features/python",
-        "./local-features/patch-python",
-        "ghcr.io/devcontainers/features/git-lfs",
-        "ghcr.io/devcontainers/features/github-cli",
-        "ghcr.io/devcontainers/features/docker-in-docker"
+        "ghcr.io/devcontainers/features/github-cli"
     ],
     "customizations": {
         "vscode": {
@@ -55,9 +52,8 @@
 				"bierner.github-markdown-preview",
 				"njpwerner.autodocstring",
 				"anseki.vscode-color",
-				"ritwickdey.LiveServer",
-				"ms-azuretools.vscode-docker"
-			]
+				"ritwickdey.LiveServer"
+	    ]
         }
     },
     "forwardPorts": [
