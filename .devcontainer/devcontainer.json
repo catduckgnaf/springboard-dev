@@ -18,6 +18,12 @@
             "version": "3.7",
             "installTools": true
         },
+        "ghcr.io/devcontainers/features/git-lfs:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/github-cli:1": {
+            "version": "latest"
+        },
         "ghcr.io/devcontainers/features/git:1": {},
         "ghcr.io/devcontainers/features/node:1": {
             "nodeGypDependencies": true,
@@ -25,6 +31,16 @@
             "nvmVersion": "0.39"
         }
     },
+    "overrideFeatureInstallOrder": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/git",
+        "ghcr.io/devcontainers/features/node",
+        "ghcr.io/devcontainers/features/python",
+        "./local-features/patch-python",
+        "ghcr.io/devcontainers/features/git-lfs",
+        "ghcr.io/devcontainers/features/github-cli",
+        "ghcr.io/devcontainers/features/docker-in-docker"
+    ],
     "customizations": {
         "vscode": {
             "extensions": [
@@ -36,6 +52,8 @@
                 "streetsidesoftware.code-spell-checker",
                 "DavidAnson.vscode-markdownlint",
                 "NoahSyn10.pydoctestbtn",
+                "dbaeumer.vscode-eslint",
+                "EditorConfig.EditorConfig",
                 "shd101wyy.markdown-preview-enhanced",
                 "bierner.github-markdown-preview",
                 "njpwerner.autodocstring",
