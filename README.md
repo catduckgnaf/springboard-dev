@@ -4,13 +4,10 @@ Welcome to your shiny new Codespace and dev container for Springboard!
 
 I created this, with the correct dependancies, versions, and requirements. Because I was switching between 5+ different machines during coursework. In addition to other projects. 
 
-Code from anywhere, install all the useful vs code extensions and settings  
+Code from anywhere, install all the useful vs code extensions and settings. Codespace is a work in progress!
 
-Use in browser for when all you kids who thought you were cool using a mac lose access to vs code
-
-but in the mean time, you can also open in vs code. more instructions unlikely to come.
-
-I plan to add starter code for various languages, tips and tricks  
+In the mean time, you can also open in vs code, follow the prompts and you are good to go! more instructions unlikely to come.
+Note, the first time it may take a while to open inside the container.
 
 # Getting Started:
 
@@ -27,39 +24,67 @@ You will have all the awesome extensions, correct versions of everything, some s
 
 # Features:
 
-## HTML  CSS  Javascript 
-
-Here we have some basic templates for getting started with what I like to call the unholy trinity. (can you tell I don't like front end?)
-
-## Python
-
-Every cool kids favorite langauge.
-Don't drive yourself crazy with venv and differnet machines and setting up envirements just for a 1 hour code exercise. 
-Yes learning this is important, but you shouldn't need to spend 8 hours setting up a dev envirement for 2 hour code project
-Some fun extensions such as running doctests right inside VS code.
-
-## Flask
-
-I mean, its better then CSS and templates and Jinja are cool right? 
-Even though Flask is on 3.0, springboard still uses 1.x.x. 
-We keepin' it old skool here.
-
-## Postgres 
-
-I haven't added anything here but I will, maybe, someday, PR anyone?
-
-## Node
-
-Hey, this is way better then outdated Jquery, thank you springboard! (beyond the sarcastic comment its a work in progress)
-
-## Extensions and settings
+## General VS Code Extensions and settings
 
 Have basic (and some non basic extensions) Such as "Live Server".
 We also have a .EditorConfig to make sure that UTF-8 is unabled, and End of Line is LF everywhere it supposed to be.
 
+Also, we have bash intergrated shell easily from VS Code. 
+
+## HTML  CSS  Javascript 
+
+I plan to add some basic things there, but essentially its mostly just live server at the moment, and some minor settings to make your life easier.
+
+## Python
+
+python 3.7.17 by default!
+ipython 7.34.0 by default 
+
+
+## Flask
+
+
+blinker==1.4
+Click==7.0
+Flask==1.0.2
+Flask-DebugToolbar==0.10.1
+itsdangerous==1.1.0
+Jinja2==2.10
+MarkupSafe==1.1.0
+Werkzeug==0.14.1
+
+
+## Database / SQL / Postgres 
+
+I am looking into building Postgres and SQL into one development container. I am looking to see if there is an easy way to do that without interfering with the current set up. 
+This is next on the list.
+
+## Node JS
+
+Hey, this is way better then outdated Jquery, thank you springboard! (beyond the sarcastic comment its a work in progress)
+
+## React 
+
+I have not gotten around to this yet, but if anyone wants to submit an issue, or a PR I will make it inclusive.
+
+## further todo:
+
+1. I plan to add more starter code for various language
+   
+2. Prebuilt containers (so you don't need to wait as long to get set up)
+
+4. Fully working codespaces!
+   
+5. Better documentation, maybe some testing. unless I get distract......OOOH A SQUIRREL 
+
+# How can I help your awesome project?
+
+In addition to the notice below, please submit issues, or PRs with suggestions and things that are not working. Especially if Springboard updates coursework, or things are not working as expected.
+you can make an issue, or submit a PR.
+
 # Do I take donations?
 
-Absolutely, I am jewish. and who doesn't love a coupon? So if you found this page and you HAVEN'T yet signed up for springboard, if you use my referall link you will get a discount.
+o if you found this page and you HAVEN'T yet signed up for springboard, if you use my referall link you will get a discount.
 So basically it is like I am paying you! Better someone giving back to the community then some rando on reddit, (thats who got my referall code)
 100% of all money recieved will go to making sure I can pay github to host codespaces, and if there is extra I will donate it to some open source project that is worthy. 
 
