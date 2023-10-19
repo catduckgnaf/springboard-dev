@@ -10,7 +10,7 @@ Use in browser for when all you kids who thought you were cool using a mac lose 
 
 but in the mean time, you can also open in vs code. more instructions unlikely to come.
 
-I plan to add starter code for various languages, tips and hints  
+I plan to add starter code for various languages, tips and tricks  
 
 # Getting Started:
 
@@ -50,11 +50,12 @@ I haven't added anything here but I will, maybe, someday, PR anyone?
 
 ## Node
 
-Hey, this is way better then outdated Jquery, thank you springboard!
+Hey, this is way better then outdated Jquery, thank you springboard! (beyond the sarcastic comment its a work in progress)
 
-## Git
+## Extensions and settings
 
-yea, you get that extension too
+Have basic (and some non basic extensions) Such as "Live Server".
+We also have a .EditorConfig to make sure that UTF-8 is unabled, and End of Line is LF everywhere it supposed to be.
 
 # Do I take donations?
 
