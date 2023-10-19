@@ -43,15 +43,15 @@
 				"esbenp.prettier-vscode",
 				"ms-python.python",
 				"ms-python.vscode-pylance",
+                "EditorConfig.EditorConfig",
 				"yzhang.markdown-all-in-one",
 				"DavidAnson.vscode-markdownlint",
 				"NoahSyn10.pydoctestbtn",
 				"dbaeumer.vscode-eslint",
-				"EditorConfig.EditorConfig",
 				"shd101wyy.markdown-preview-enhanced",
 				"bierner.github-markdown-preview",
-				"njpwerner.autodocstring",
 				"anseki.vscode-color",
+                "tal7aouy.rainbow-bracket",
 				"ritwickdey.LiveServer"
 	    ]
         }
