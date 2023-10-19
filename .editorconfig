@@ -20,6 +20,9 @@ indent_size = 4
 indent_style = tab
 charset = utf-8
 
+[*.js]
+indent_style = tab
+charset = utf-8
 
 [Dockerfile]
 indent_style = spaces
