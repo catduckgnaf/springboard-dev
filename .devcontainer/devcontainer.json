@@ -1,9 +1,14 @@
 {
-    "name": "Springboard Dev",
-    "build": {
-        "dockerfile": "./Dockerfile",
-        "context": "."
+    "name": "Springboard Docker Compose",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    
+    // Use this environment variable if you need to bind mount your local source code into a new container.
+    "remoteEnv": {
+        "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
     },
+    
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
             "installZsh": true,
@@ -22,13 +27,13 @@
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/git:1.1.6": {},
-        
         "ghcr.io/devcontainers/features/node:1": {
             "nodeGypDependencies": true,
             "version": "18",
             "nvmVersion": "0.39"
         }
     },
+    
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/devcontainers/features/git",
@@ -36,31 +41,39 @@
         "ghcr.io/devcontainers/features/python",
         "ghcr.io/devcontainers/features/github-cli"
     ],
+    
+    // Configure tool-specific properties.
     "customizations": {
-        "vscode": {
+        // Configure properties specific to VS Code.
+        "vscode": {        
+            // Add the IDs of extensions you want installed when the container is created.
             "extensions": [
-				"mads-hartmann.bash-ide-vscode",
-				"esbenp.prettier-vscode",
-				"ms-python.python",
-				"ms-python.vscode-pylance",
+                "ms-azuretools.vscode-docker",
+                "mads-hartmann.bash-ide-vscode",
+                "esbenp.prettier-vscode",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "mtxr.sqltools",
+                "mtxr.sqltools-driver-pg", // Added missing comma here
                 "EditorConfig.EditorConfig",
-				"yzhang.markdown-all-in-one",
-				"DavidAnson.vscode-markdownlint",
-				"NoahSyn10.pydoctestbtn",
-				"dbaeumer.vscode-eslint",
-				"shd101wyy.markdown-preview-enhanced",
-				"bierner.github-markdown-preview",
-				"anseki.vscode-color",
-                "tal7aouy.rainbow-bracket",
-				"ritwickdey.LiveServer"
-	    ]
+                "yzhang.markdown-all-in-one",
+                "DavidAnson.vscode-markdownlint",
+                "NoahSyn10.pydoctestbtn",
+                "dbaeumer.vscode-eslint",
+                "shd101wyy.markdown-preview-enhanced",
+                "bierner.github-markdown-preview",
+                "anseki.vscode-color",
+                "ritwickdey.LiveServer"
+            ]
         }
     },
-    "forwardPorts": [
-        5000,
-        5432,
-        9000
-],
+    
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [5000, 5432, 9000],
+    
+    // Use 'postCreateCommand' to run commands after the container is created.
     "postCreateCommand": "bash .devcontainer/run.sh",
+    
+    // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
     "remoteUser": "vscode"
 }
