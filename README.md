@@ -34,6 +34,13 @@ You will have all the awesome extensions, correct versions of everything, some s
 
 ## General VS Code Extensions and settings
 
+WSL users get confused about file paths no more! The intergrated bash terminal, binds a /workspace/ folder to the dev cointainer.
+
+If you are looking for files 
+
+C:\GitHub\springboard-dev\coursework  is the mapped to /coursework inside the container! That easy!!
+
+
 Have basic (and some non basic extensions) Such as "Live Server".
 We also have a .EditorConfig to make sure that UTF-8 is unabled, and End of Line is LF everywhere it supposed to be.
 
@@ -41,7 +48,7 @@ Also, we have bash intergrated shell easily from VS Code.
 
 ## HTML  CSS  Javascript 
 
-I plan to add some basic things there, but essentially its mostly just live server at the moment, and some minor settings to make your life easier.
+I plan to add some basic things there, but essentially its mostly just live server at the moment, and some minor settings to makcoure your life easier.
 
 ## Python
 
