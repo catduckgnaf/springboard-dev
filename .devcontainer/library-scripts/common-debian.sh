@@ -157,7 +157,12 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
         apt-get -y install --no-install-recommends git
     fi
 
-    # Install postgres if not already installed (may be more recent than distro version)
+    # Install postgresql if not already installed (may be more recent than distro version)
+    if ! type postgresql > /dev/null 2>&1; then
+        apt-get -y install --no-install-recommends postgresql
+    fi
+
+    # Install python3-mysqldb if not already installed (may be more recent than distro version)
     if ! type python3-mysqldb > /dev/null 2>&1; then
         apt-get -y install --no-install-recommends python3-mysqldb
     fi
