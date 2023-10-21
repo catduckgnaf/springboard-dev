@@ -102,6 +102,7 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
         strace \
         manpages \
         manpages-dev \
+        
         init-system-helpers"
         
     # Needed for adding manpages-posix and manpages-posix-dev which are non-free packages in Debian
