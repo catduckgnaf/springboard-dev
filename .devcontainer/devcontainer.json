@@ -85,7 +85,7 @@
         "target=/root/.vscode-server,type=volume"
     ],
     
-    "postCreateCommand": "bash .devcontainer/run.sh",
+    "postCreateCommand": "bash .devcontainer/library-scripts/run.sh",
     
     "remoteUser": "vscode"
 }
