@@ -47,7 +47,19 @@
         // Configure properties specific to VS Code.
         "vscode": {        
 				// Set *default* container specific settings.json values on container create.
-			"settings": {},
+			"settings": {
+                "extensions.ignoreRecommendations": true,
+                "cSpell.words": [
+             "Distro",
+             "Dockerfiles",
+             "cgmanifest",
+             "copyfiles",
+             "devcontainer",
+             "devcontainers",
+             "dpkg",
+             "npmignore",
+             "redhat"
+            },
             // Add the IDs of extensions you want installed when the container is created.
             "extensions": [
                 "ms-azuretools.vscode-docker",
