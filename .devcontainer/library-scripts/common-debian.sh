@@ -7,7 +7,7 @@ USER_UID=${3:-"automatic"}
 USER_GID=${4:-"automatic"}
 UPGRADE_PACKAGES=${5:-"true"}
 INSTALL_OH_MYS=${6:-"true"}
-ADD_NON_FREE_PACKAGES=${7:-"false"}
+ADD_NON_FREE_PACKAGES=${7:-"true"}
 SCRIPT_DIR="$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)"
 MARKER_FILE="/usr/local/etc/vscode-dev-containers/common"
 
@@ -49,6 +49,12 @@ fi
 
 # Ensure apt is in non-interactive to avoid prompts
 export DEBIAN_FRONTEND=noninteractive
+
+# Add the PostgreSQL repository
+echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
+
+# Import the PostgreSQL GPG key
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 
 # Function to call apt-get if needed
 apt_get_update_if_needed()
@@ -103,7 +109,7 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
         manpages \
         manpages-dev \
         python3-mysqldb \
-        postgresql \
+        postgresql-14 \
         init-system-helpers"
         
     # Needed for adding manpages-posix and manpages-posix-dev which are non-free packages in Debian

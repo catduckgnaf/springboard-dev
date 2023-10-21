@@ -180,6 +180,8 @@ else
     echo "cli_version_suffix ${cli_version_suffix}"
 fi
 
+
+
 # Install Docker / Moby CLI if not already installed
 if type docker > /dev/null 2>&1; then
     echo "Docker / Moby CLI already installed."
