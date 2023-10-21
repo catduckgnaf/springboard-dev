@@ -54,7 +54,7 @@
                 "ms-python.python",
                 "ms-python.vscode-pylance",
                 "mtxr.sqltools",
-                "mtxr.sqltools-driver-pg", // Added missing comma here
+                "mtxr.sqltools-driver-pg", 
                 "EditorConfig.EditorConfig",
                 "yzhang.markdown-all-in-one",
                 "DavidAnson.vscode-markdownlint",
@@ -69,8 +69,13 @@
     },
     
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    "forwardPorts": [5000, 5432, 9000],
-    
+    "forwardPorts": [5000, 5432, 9000, 8000],
+	
+	"mounts": [
+        "source=profile,target=/root,type=volume",
+        "target=/root/.vscode-server,type=volume"
+    ],
+	
     // Use 'postCreateCommand' to run commands after the container is created.
     "postCreateCommand": "bash .devcontainer/run.sh",
     
