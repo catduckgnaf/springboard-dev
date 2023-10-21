@@ -51,10 +51,10 @@ fi
 export DEBIAN_FRONTEND=noninteractive
 
 # Add the PostgreSQL repository
-echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
+# echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
 
 # Import the PostgreSQL GPG key
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+# wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 
 # Function to call apt-get if needed
 apt_get_update_if_needed()
@@ -108,8 +108,6 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
         strace \
         manpages \
         manpages-dev \
-        python3-mysqldb \
-        postgresql-14 \
         init-system-helpers"
         
     # Needed for adding manpages-posix and manpages-posix-dev which are non-free packages in Debian
@@ -159,7 +157,14 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
         apt-get -y install --no-install-recommends git
     fi
 
+    # Install postgres if not already installed (may be more recent than distro version)
+    if ! type python3-mysqldb > /dev/null 2>&1; then
+        apt-get -y install --no-install-recommends python3-mysqldb
+    fi
+
     PACKAGES_ALREADY_INSTALLED="true"
+
+    
 fi
 
 # Get to latest versions of all packages

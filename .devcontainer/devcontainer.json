@@ -60,6 +60,7 @@
                     "ms-azuretools.vscode-docker",
                     "mads-hartmann.bash-ide-vscode",
                     "esbenp.prettier-vscode",
+                    "VisualStudioExptTeam.vscodeintellicode",
                     "ms-python.python",
                     "ms-python.vscode-pylance",
                     "mtxr.sqltools",
@@ -82,6 +83,7 @@
     
     "mounts": [
         "source=profile,target=/root,type=volume",
+        "source=projectname-bashhistory,target=/commandhistory,type=volume",
         "target=/root/.vscode-server,type=volume"
     ],
     
