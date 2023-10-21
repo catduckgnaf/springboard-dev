@@ -8,11 +8,11 @@ sudo /etc/init.d/postgresql start
 sudo /etc/init.d/postgresql stop
 
 # command to start flask
-sudo /etc/init.d/postgresql start
+flask run
 
 # command to stop flask
 
-sudo /etc/init.d/postgresql stop
+flask stop
 
 
 # to set up pgadmin4
