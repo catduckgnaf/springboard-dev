@@ -1,13 +1,4 @@
 #!/usr/bin/env bash
-#-------------------------------------------------------------------------------------------------------------
-# Copyright (c) Microsoft Corporation. All rights reserved.
-# Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
-#-------------------------------------------------------------------------------------------------------------
-#
-# Docs: https://github.com/microsoft/vscode-dev-containers/blob/main/script-library/docs/docker.md
-# Maintainer: The VS Code and Codespaces Teams
-#
-# Syntax: ./docker-debian.sh [enable non-root docker socket access flag] [source socket] [target socket] [non-root user] [use moby] [CLI version] [Major version for docker-compose]
 
 ENABLE_NONROOT_DOCKER=${1:-"true"}
 SOURCE_SOCKET=${2:-"/var/run/docker-host.sock"}
