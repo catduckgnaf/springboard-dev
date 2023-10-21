@@ -32,7 +32,7 @@ You will have all the awesome extensions, correct versions of everything, some s
 
 # Features:
 
-# Easy path management for not just WSL, but all users! 
+## Easy path management for not just WSL, but all users! 
 
 Your workspace folder is the root of your container. You can move the folder and open it up, and good to go! You can edit files from the download, download items to the folder, and they will be nicely contained (pun intended).
 
