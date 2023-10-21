@@ -102,7 +102,7 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
         strace \
         manpages \
         manpages-dev \
-        python-mysqldb \
+        python3-mysqldb \
         postgresql \
         init-system-helpers"
         
