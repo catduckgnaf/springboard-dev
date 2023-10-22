@@ -158,9 +158,9 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
     fi
 
     # Install postgresql-controb (and dependendencies to including postgresql) if not already installed (may be more recent than distro version)
-    if ! type postgresql > /dev/null 2>&1; then
-        apt-get -y install --no-install-recommends postgresql-contrib
-    fi
+   # if ! type postgresql > /dev/null 2>&1; then
+   #     apt-get -y install --no-install-recommends postgresql-contrib
+   #  fi
 
     # Install pgadmin4 (and dependendencies to including postgresql) if not already installed (may be more recent than distro version)
     if ! type pgadmin4 > /dev/null 2>&1; then
