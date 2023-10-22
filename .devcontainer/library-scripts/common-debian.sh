@@ -157,12 +157,29 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
         apt-get -y install --no-install-recommends git
     fi
 
-    # Install postgresql-contrib (and dependendencies to including postgresql) if not already installed (may be more recent than distro version)
-   # if ! type postgresql > /dev/null 2>&1; then
-   #     apt-get -y install --no-install-recommends postgresql-contrib
-   #  fi
+   # Install pgadmin4 (and dependendencies to including postgresql) if not already installed (may be more recent than distro version)
 
-    # Install pgadmin4 (and dependendencies to including postgresql) if not already installed (may be more recent than distro version)
+    curl -fsSL https://www.pgadmin.org/static/packages_pgadmin_org.pub | gpg --dearmor -o /etc/apt/trusted.gpg.d/pgadmin.gpg
+    sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list'
+    sudo apt update
+    apt-get -y install --no-install-recommends pgadmin4
+
+    if ! type postgresql14 > /dev/null 2>&1; then
+    sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+    apt-get update
+    apt-get -y install --no-install-recommends postgresql14 
+    fi 
+
+    if ! type postgres-client-14 > /dev/null 2>&1; then
+    apt-get -y install --no-install-recommends postgres-client-14
+    fi 
+
+    if ! type postgres-contrib-14 > /dev/null 2>&1; then
+    apt-get -y install --no-install-recommends postgres-contrib-14
+    fi 
+
+    # Install pgadmin4 if not already installed (may be more recent than distro version)
     if ! type pgadmin4 > /dev/null 2>&1; then
     curl -fsSL https://www.pgadmin.org/static/packages_pgadmin_org.pub | gpg --dearmor -o /etc/apt/trusted.gpg.d/pgadmin.gpg
     sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list'

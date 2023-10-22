@@ -21,5 +21,5 @@ services:
 
     # Uncomment the next line to use a non-root user for all processes.
 
-volumes:
+# volumes:
  # springboard-dev-bashhistory:
