@@ -1,4 +1,3 @@
-# Note: You can use any Debian/Ubuntu based image you want. 
 FROM buildpack-deps:jammy-curl
 
 # [Option] Install zsh
@@ -10,12 +9,16 @@ ARG ENABLE_NONROOT_DOCKER="true"
 # [Option] Use the OSS Moby CLI instead of the licensed Docker CLI
 ARG USE_MOBY="true"
 
+
+
 # Enable new "BUILDKIT" mode for Docker CLI
 ENV DOCKER_BUILDKIT=1
 
+ENV PYTHONUNBUFFERED 1
+
 # Install needed packages and setup non-root user. Use a separate RUN statement to add your
 # own dependencies. A user of "automatic" attempts to reuse an user ID if one already exists.
-ARG USERNAME=automatic
+ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 COPY library-scripts/*.sh /tmp/library-scripts/
@@ -41,7 +44,6 @@ CMD [ "sleep", "infinity" ]
 #    && chown -R $USERNAME /commandhistory \
 #    && echo "$SNIPPET" >> "/home/$USERNAME/.bashrc"
 
-ENV PYTHONUNBUFFERED 1
 ENV LANG="C.UTF-8"
 
 
