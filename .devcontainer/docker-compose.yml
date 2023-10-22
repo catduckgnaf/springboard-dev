@@ -13,17 +13,6 @@ services:
 
     entrypoint: /usr/local/share/docker-init.sh
     command: sleep infinity
-    network_mode: service:db
-
-  db:
-    image: postgres:latest
-    restart: unless-stopped
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
-    environment:
-      POSTGRES_DB: postgresdb
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres1234
     # Uncomment the next four lines if you will use a ptrace-based debugger like C++, Go, and Rust.
     # cap_add:
     #   - SYS_PTRACE
@@ -34,4 +23,3 @@ services:
 
 volumes:
  # springboard-dev-bashhistory:
-  postgres-data:

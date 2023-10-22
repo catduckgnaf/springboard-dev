@@ -157,7 +157,7 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
         apt-get -y install --no-install-recommends git
     fi
 
-    # Install postgresql-controb (and dependendencies to including postgresql) if not already installed (may be more recent than distro version)
+    # Install postgresql-contrib (and dependendencies to including postgresql) if not already installed (may be more recent than distro version)
    # if ! type postgresql > /dev/null 2>&1; then
    #     apt-get -y install --no-install-recommends postgresql-contrib
    #  fi
