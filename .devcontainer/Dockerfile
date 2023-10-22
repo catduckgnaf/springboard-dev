@@ -18,7 +18,7 @@ ENV PYTHONUNBUFFERED 1
 
 # Install needed packages and setup non-root user. Use a separate RUN statement to add your
 # own dependencies. A user of "automatic" attempts to reuse an user ID if one already exists.
-ARG USERNAME=vscode
+ARG USERNAME=automatic
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 COPY library-scripts/*.sh /tmp/library-scripts/
