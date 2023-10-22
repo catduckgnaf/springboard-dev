@@ -1,13 +1,11 @@
 {
-    "name": "Springboard Docker Compose",
+    "name": "Springboard Dev Container",
     "dockerComposeFile": "docker-compose.yml",
     "service": "app",
     "workspaceFolder": "/workspace",
-    
     "remoteEnv": {
         "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
     },
-    
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
             "installZsh": true,
@@ -32,7 +30,6 @@
             "nvmVersion": "0.39"
         }
     },
-    
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/devcontainers/features/git",
@@ -40,11 +37,31 @@
         "ghcr.io/devcontainers/features/python",
         "ghcr.io/devcontainers/features/github-cli"
     ],
-    
     "customizations": {
         "vscode": {
             "settings": {
+                "sqltools.connections": [
+                    {
+                        "name": "PostgresSQL database container",
+                        "driver": "PostgreSQL",
+                        "previewLimit": 50,
+                        "server": "localhost",
+                        "port": 5432,
+                        "database": "postgresdb",
+                        "username": "postgres",
+                        "password": "postgres1234"
+                    }
+                ],
                 "extensions.ignoreRecommendations": true,
+                "python.pythonPath": "/usr/local/bin/python",
+                "python.languageServer": "Pylance",
+                "python.linting.enabled": true,
+                "python.linting.mypyEnabled": true,
+                "python.testing.pytestEnabled": true,
+                "python.formatting.provider": "black",
+                "python.formatting.blackArgs": [
+                    "--line-length=80"
+                ],
                 "cSpell.words": [
                     "Distro",
                     "Dockerfiles",
@@ -78,16 +95,12 @@
             }
         }
     },
-    
     "forwardPorts": [5000, 5432, 9000, 8000],
-    
     "mounts": [
         "source=profile,target=/root,type=volume",
         "source=projectname-bashhistory,target=/commandhistory,type=volume",
         "target=/root/.vscode-server,type=volume"
     ],
-    
-   "postCreateCommand": "bash .devcontainer/library-scripts/run.sh",
-    
+    "postCreateCommand": "bash .devcontainer/library-scripts/run.sh",
     "remoteUser": "vscode"
 }
