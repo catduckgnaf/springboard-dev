@@ -269,7 +269,7 @@ if [[ "${PATH}" != *"$HOME/.local/bin"* ]]; then export PATH="${PATH}:$HOME/.loc
 if [ -t 1 ] && [[ "${TERM_PROGRAM}" = "vscode" || "${TERM_PROGRAM}" = "codespaces" ]] && [ ! -f "$HOME/.config/vscode-dev-containers/first-run-notice-already-displayed" ]; then
     if [ -f "/usr/local/etc/vscode-dev-containers/first-run-notice.txt" ]; then
         cat "/usr/local/etc/vscode-dev-containers/first-run-notice.txt"
-    elif [ -f "/workspaces/.codespaces/shared/first-run-notice.txt" ]; then
+    elif [ -f "/workspaces\/.codespaces/shared/first-run-notice.txt" ]; then
         cat "/workspaces/.codespaces/shared/first-run-notice.txt"
     fi
     mkdir -p "$HOME/.config/vscode-dev-containers"
