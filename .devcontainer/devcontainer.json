@@ -78,7 +78,6 @@
 				"esbenp.prettier-vscode",
 				"VisualStudioExptTeam.vscodeintellicode",
 				"ms-python.python",
-				"ms-python.vscode-pylance",
 				"mtxr.sqltools",
 				"mtxr.sqltools-driver-pg",
 				"EditorConfig.EditorConfig",
@@ -87,7 +86,6 @@
 				"dbaeumer.vscode-eslint",
 				"anseki.vscode-color",
 				"ritwickdey.LiveServer",
-				"ms-python.mypy-type-checker",
 				"ms-python.pylint"
 			]
         }
