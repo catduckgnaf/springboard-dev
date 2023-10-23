@@ -1,3 +1,8 @@
+on:
+  push:
+    branches:
+    - main
+    - release/*
 - name: Dev Container Publish
   uses: devcontainers/action@v1.4.0
             
