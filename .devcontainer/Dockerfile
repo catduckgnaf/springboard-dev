@@ -19,7 +19,7 @@ ENV PIPX_HOME=/usr/local/py-utils \
     PIPX_BIN_DIR=/usr/local/py-utils/bin
 ENV PATH=${PYTHON_PATH}/bin:${PATH}:${PIPX_BIN_DIR}
 COPY library-scripts/python-debian.sh /tmp/library-scripts/
-RUN apt-get update && bash /tmp/library-scripts/python-debian.sh "3.8.3" "${PYTHON_PATH}" "${PIPX_HOME}"
+RUN apt-get update && bash /tmp/library-scripts/python-debian.sh "3.7.12" "${PYTHON_PATH}" "${PIPX_HOME}"
 # Install needed packages and setup non-root user. Use a separate RUN statement to add your
 # own dependencies. A user of "automatic" attempts to reuse an user ID if one already exists.
 ARG USERNAME=automatic
