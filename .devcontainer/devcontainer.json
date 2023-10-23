@@ -52,8 +52,6 @@
                         "password": "postgres1234"
                     }
                 ],
-                "extensions.ignoreRecommendations": true,
-                "python.pythonPath": "/usr/local/bin/python",
                 "cSpell.words": [
                     "Distro",
                     "Dockerfiles",
