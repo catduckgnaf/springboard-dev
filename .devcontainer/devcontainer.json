@@ -95,7 +95,11 @@
 			},
 			"extensions": [
 				"mtxr.sqltools",
-				"ritwickdey.LiveServer"
+				"ritwickdey.LiveServer",
+				"esbenp.prettier-vscode",
+				"NoahSyn10.pydoctestbtn",
+				"streetsidesoftware.code-spell-checker",
+				"anseki.vscode-color"
 			]
         }
     },
@@ -105,6 +109,6 @@
         "source=projectname-bashhistory,target=/commandhistory,type=volume",
         "target=/root/.vscode-server,type=volume"
     ],
-    "postCreateCommand": "bash .devcontainer/library-scripts/run.sh",
+    "postCreateCommand": "bash .devcontainer/library-scripts/run.sh && bash",
     "remoteUser": "vscode"
 }
