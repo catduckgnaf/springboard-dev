@@ -1,29 +1,3 @@
-- name: Dev Container Publish
-  # You may pin to the exact commit or the version.
-  # uses: devcontainers/action@3f8cae6bc8e5ef6d58062d7c5cc471d81e8ded05
-  uses: devcontainers/action@v1.4.0
-  with:
-    # Parse machine-readable (.json) configuration files and commit standardized documentation
-    generate-docs: # optional, default is false
-    # Disables validation of the schema of metadata files (devcontainer-feature.json)
-    disable-schema-validation: # optional, default is false
-    # Validate the schema of metadata files (devcontainer-feature.json) and exit without publishing. (Cannot be combined with any publishing step).
-    validate-only: # optional, default is false
-    # Disables adding a git repo tag for each Feature or Template release.
-    disable-repo-tagging: # optional, default is false
-    # (true/false) Enable publishing Dev Container Feature(s). Cannot be combined with publish-templates.
-    publish-features: # optional, default is false
-    # Relative path to the folder containing Dev Container Feature(s)
-    base-path-to-features: # optional, default is 
-    # Name of the OCI registry that implements the OCI Artifact Distribution Specification
-    oci-registry: # optional
-    # Published Feature IDs will be prefixed with the namespace. If omitted, this value will default to the source repo name
-    features-namespace: # optional
-    # (true/false) Enable publishing Dev Container Template(s). Cannot be combined with publish-features.
-    publish-templates: # optional, default is false
-    # Relative path to the folder containing Dev Container Template(s)
-    base-path-to-templates: # optional, default is 
-    # Name of the OCI registry that implements the OCI Artifact Distribution Specification
-    oci-registry-for-templates: # optional
-    # Published Template IDs will be prefixed with the namespace. If omitted, this value will default to the source repo name
-    templates-namespace: # optional
+              - name: Dev Container Publish
+                uses: devcontainers/action@v1.4.0
+            
