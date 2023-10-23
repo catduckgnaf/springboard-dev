@@ -52,16 +52,8 @@
                         "password": "postgres1234"
                     }
                 ],
-                "extensions.ignoreRecommendations": false,
+                "extensions.ignoreRecommendations": true,
                 "python.pythonPath": "/usr/local/bin/python",
-                "python.languageServer": "Pylance",
-                "python.linting.enabled": true,
-                "python.linting.mypyEnabled": true,
-                "python.testing.pytestEnabled": true,
-                "python.formatting.provider": "black",
-                "python.formatting.blackArgs": [
-                    "--line-length=80"
-                ],
                 "cSpell.words": [
                     "Distro",
                     "Dockerfiles",
