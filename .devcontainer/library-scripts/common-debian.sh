@@ -172,9 +172,9 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
     apt-get -y install --no-install-recommends postgresql-client-14
     fi 
 
-    if ! type postgresql-contrib > /dev/null 2>&1; then
-    apt-get -y install --no-install-recommends postgresql-contrib
-    fi 
+    #  if ! type postgresql-contrib > /dev/null 2>&1; then
+    # apt-get -y install --no-install-recommends postgresql-contrib
+    # fi 
 
     if ! type postgresql-plpython3-14 > /dev/null 2>&1; then
     apt-get -y install --no-install-recommends postgresql-plpython3-14
