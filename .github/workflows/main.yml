@@ -6,8 +6,8 @@ on:
       - main
   pull_request:
 
-  env:
-    REGISTRY: ghcr.io
+env:
+  REGISTRY: ghcr.io
 
 concurrency:
   group: ${{ github.ref }}
@@ -35,14 +35,12 @@ jobs:
 
     - name: Build Dev Container Image
       if: github.event.pull_request.head.repo.full_name != github.repository
-      with:
-        args: |          --image ${{ github.repository}}--{arch} \
-          --self-cache \
-          --version $GITHUB_REF_SLUG \
-          --no-latest \
+      run: |
+        # Replace with your actual build commands
+        docker build -t ${{ github.repository}}--${{ matrix.arch }}:latest .
       working-directory: .devcontainer/
 
-    - name: Log in to Docker Hub (or your preferred registry)
+    - name: Log in to Docker Registry
       uses: docker/login-action@v1
       with:
         registry: ${{ env.REGISTRY }}
@@ -52,6 +50,5 @@ jobs:
     - name: Push Dev Container Image
       run: |
         # Push the image to your container registry
-        docker push my-dev-container:latest
+        docker push ${{ github.repository}}--${{ matrix.arch }}:latest
       working-directory: .devcontainer/
-
