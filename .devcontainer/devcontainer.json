@@ -73,33 +73,20 @@
                     "npmignore",
                     "redhat"
                 ],
-                "extensions": [
-                    "ms-azuretools.vscode-docker",
-                    "mads-hartmann.bash-ide-vscode",
-                    "esbenp.prettier-vscode",
-                    "VisualStudioExptTeam.vscodeintellicode",
-                    "ms-python.python",
-                    "ms-python.vscode-pylance",
-                    "mtxr.sqltools",
-                    "mtxr.sqltools-driver-pg",
-                    "EditorConfig.EditorConfig",
-                    "yzhang.markdown-all-in-one",
-                    "DavidAnson.vscode-markdownlint",
-                    "NoahSyn10.pydoctestbtn",
-                    "dbaeumer.vscode-eslint",
-                    "shd101wyy.markdown-preview-enhanced",
-                    "bierner.github-markdown-preview",
-                    "anseki.vscode-color",
-                    "ritwickdey.LiveServer"
-                ]
 			},
 			"extensions": [
-				"mtxr.sqltools",
-				"ritwickdey.LiveServer",
-				"esbenp.prettier-vscode",
-				"NoahSyn10.pydoctestbtn",
-				"streetsidesoftware.code-spell-checker",
-				"anseki.vscode-color"
+                "esbenp.prettier-vscode",
+                "VisualStudioExptTeam.vscodeintellicode",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "mtxr.sqltools",
+                "mtxr.sqltools-driver-pg",
+                "EditorConfig.EditorConfig",
+                "yzhang.markdown-all-in-one",
+                "NoahSyn10.pydoctestbtn",
+                "dbaeumer.vscode-eslint",
+                "anseki.vscode-color",
+                "ritwickdey.LiveServer"
 			]
         }
     },
