@@ -87,7 +87,8 @@
 				"dbaeumer.vscode-eslint",
 				"anseki.vscode-color",
 				"ritwickdey.LiveServer",
-				"ms-python.mypy-type-checker"
+				"ms-python.mypy-type-checker",
+				"ms-python.pylint"
 			]
         }
     },
