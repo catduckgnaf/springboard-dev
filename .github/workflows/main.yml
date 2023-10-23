@@ -1,4 +1,4 @@
-name: Dev Container Workflow
+name: Prebuild Dev Container
 
 on:
   push:
@@ -13,18 +13,27 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Dev Container Publish
-      uses: devcontainers/action@v1.4.0
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
       with:
-        generate-docs: false
-        disable-schema-validation: false
-        validate-only: false
-        disable-repo-tagging: false
-        publish-features: false
-        base-path-to-features: ''
-        oci-registry: ''
-        features-namespace: ''
-        publish-templates: true
-        base-path-to-templates: '/'
-        oci-registry-for-templates: ''
-        templates-namespace: ''
+        node-version: 14
+
+    - name: Build Dev Container Image
+      run: |
+        # Add your custom build commands here
+        # For example, if you are using Docker to build the image:
+        docker build -t my-dev-container:latest .
+      working-directory: /
+
+    - name: Log in to Docker Hub (or your preferred registry)
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Push Dev Container Image
+      run: |
+        # Push the image to your container registry
+        docker push my-dev-container:latest
+      working-directory: /
+
