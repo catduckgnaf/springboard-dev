@@ -52,7 +52,7 @@
                         "password": "postgres1234"
                     }
                 ],
-                "extensions.ignoreRecommendations": true,
+                "extensions.ignoreRecommendations": false,
                 "python.pythonPath": "/usr/local/bin/python",
                 "python.languageServer": "Pylance",
                 "python.linting.enabled": true,
@@ -92,7 +92,10 @@
                     "anseki.vscode-color",
                     "ritwickdey.LiveServer"
                 ]
-            }
+			},
+			"extensions": [
+				"mtxr.sqltools"
+			]
         }
     },
     "forwardPorts": [5000, 5432, 9000, 8000],
