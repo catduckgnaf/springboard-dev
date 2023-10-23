@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # command to start postgres
+
+## to start postgres:
 sudo /etc/init.d/postgresql start
+su -postgres
+psql
 
 # command to stop postgres
 

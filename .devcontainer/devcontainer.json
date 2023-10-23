@@ -48,7 +48,7 @@
                         "server": "localhost",
                         "port": 5432,
                         "database": "postgresdb",
-                        "username": "postgres",
+                        "username": "vscode",
                         "password": "postgres1234"
                     }
                 ],
