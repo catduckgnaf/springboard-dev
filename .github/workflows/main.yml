@@ -23,7 +23,7 @@ jobs:
         # Add your custom build commands here
         # For example, if you are using Docker to build the image:
         docker build -t my-dev-container:latest .
-      working-directory: /
+      working-directory: .devcontainer/
 
     - name: Log in to Docker Hub (or your preferred registry)
       uses: docker/login-action@v1
@@ -35,5 +35,5 @@ jobs:
       run: |
         # Push the image to your container registry
         docker push my-dev-container:latest
-      working-directory: /
+      working-directory: .devcontainer/
 
