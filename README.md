@@ -72,8 +72,11 @@ Werkzeug==0.14.1
 
 ## Database / SQL / Postgres 
 
-I am looking into building Postgres and SQL into one development container. I am looking to see if there is an easy way to do that without interfering with the current set up. 
-This is next on the list  
+Postgres is not built into the intergrated VS Code terminal, to login:
+
+sudo /etc/init.d/postgresql start
+su -postgres
+psql
 
 ## Node JS
 
@@ -95,7 +98,8 @@ I have not gotten around to this yet, but if anyone wants to submit an issue, or
 
 # How can I help your awesome project?
 
-In addition to the notice below, please submit issues, or PRs with suggestions and things that are not working. Especially if Springboard updates coursework, or things are not working as expected. In the future. 
+In addition to the notice below, please submit issues, or PRs with suggestions and things that are not working. Especially if Springboard updates coursework, or things are not working as expected. Make an issue on github and I will try to replicate the issue and provide a fix. I also did not provide the "best" documentation for a true beginniner, so if anyone wants to submit tutorials, etc once again that is welcome!
+
 
 
 # Do I take donations?
