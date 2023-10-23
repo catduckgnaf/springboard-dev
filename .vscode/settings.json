@@ -1,5 +1,5 @@
 {
-    "extensions.ignoreRecommendations": true,
+    "extensions.ignoreRecommendations": false,
     "cSpell.words": [
         "Distro",
         "Dockerfiles",
