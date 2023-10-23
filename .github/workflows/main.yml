@@ -19,7 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        arch: [armhf, armv7, aarch64, amd64, i386]
+        arch: [amd64]
+##        arch: [armhf, armv7, aarch64, amd64, i386]
         
     steps:
     - name: Inject slug/short variables
@@ -37,7 +38,7 @@ jobs:
       if: github.event.pull_request.head.repo.full_name != github.repository
       run: |
         # Replace with your actual build commands
-        docker build -t ${{ github.repository}}--${{ matrix.arch }}:latest .
+        docker build -t ${{ github.repository}}-${{ matrix.arch }}:latest .
       working-directory: .devcontainer/
 
     - name: Log in to Docker Registry
@@ -50,5 +51,5 @@ jobs:
     - name: Push Dev Container Image
       run: |
         # Push the image to your container registry
-        docker push ${{ github.repository}}--${{ matrix.arch }}:latest
+        docker push ${{ github.repository}}-${{ matrix.arch }}:latest
       working-directory: .devcontainer/
