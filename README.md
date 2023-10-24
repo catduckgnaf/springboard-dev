@@ -20,7 +20,7 @@ It is probably not the best use of everyone's time to spend all day getting erro
 
 # Getting Started:
 
-I mean really if you don't know how to do these next steps, you should probably just quit and work and wendys.
+I mean really if you don't know how to do these next steps, you should probably just quit and work and McDonalds.
 You will have all the awesome extensions, correct versions of everything, some starter code, and very likely unhelpful sarcasm buried somewhere.
 
 Option 1. You can also download the [latest release](https://github.com/catduckgnaf/springboard-dev/releases/tag/0.1), unzip, right click the entire folder and open in VS code.  Follow the prompts and you are good to go! More instructions unlikely to come. It will take a while to compile, grab some coffee, and wait. I am working on "prebuilding" this to make it faster. After the first time it will load up basically right away.
