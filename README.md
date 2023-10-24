@@ -71,11 +71,9 @@ Werkzeug==0.14.1
 
 ## Database / SQL / Postgres 
 
-Postgres is not built into the intergrated VS Code terminal, to login:
+Postgres is there, it works:
 
 sudo /etc/init.d/postgresql start
-su -postgres
-psql
 
 ## Node JS
 
