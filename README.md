@@ -31,6 +31,7 @@ So here you go!
 
 # Features:
 
+Go look how pretty it is!
 https://github.com/catduckgnaf/springboard-dev/blob/main/screenshot.png
 
 ## Easy path management for not just WSL, but all users! 
