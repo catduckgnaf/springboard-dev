@@ -62,6 +62,14 @@ ipython 7.34.0 by default
 ## Flask
 
 
+## command to start flask with development mode on
+FLASK_ENV=development flask run
+
+## command to stop flask
+flask stop
+
+requirements.txt includes:
+
 blinker==1.4
 Click==7.0
 Flask==1.0.2
@@ -75,8 +83,17 @@ Werkzeug==0.14.1
 ## Database / SQL / Postgres 
 
 Postgres is there, it works:
+# command to start postgres
 
+## to start postgres:
 sudo /etc/init.d/postgresql start
+sudo -s
+su -postgres
+psql
+
+# command to stop postgres
+
+sudo /etc/init.d/postgresql stop
 
 ## Node JS
 
