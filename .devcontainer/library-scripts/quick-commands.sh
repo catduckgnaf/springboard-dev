@@ -3,8 +3,9 @@
 # command to start postgres
 
 ## to start postgres:
-sudo /etc/init.d/postgresql start
+sudo -s
 su -postgres
+sudo /etc/init.d/postgresql start
 psql
 
 # command to stop postgres
