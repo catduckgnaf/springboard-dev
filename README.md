@@ -31,6 +31,9 @@ So here you go!
 
 # Features:
 
+Go look how pretty it is!
+https://github.com/catduckgnaf/springboard-dev/blob/main/screenshot.png
+
 ## Easy path management for not just WSL, but all users! 
 
 Your "workspace folder is the root of your container(springboard-dev folder). You can move the folder and open it up, and good to go! You can edit files from the download, download items to the folder, and they will be nicely contained (pun intended).
@@ -59,6 +62,14 @@ ipython 7.34.0 by default
 ## Flask
 
 
+## command to start flask with development mode on
+FLASK_ENV=development flask run
+
+## command to stop flask
+flask stop
+
+requirements.txt includes:
+
 blinker==1.4
 Click==7.0
 Flask==1.0.2
@@ -72,8 +83,17 @@ Werkzeug==0.14.1
 ## Database / SQL / Postgres 
 
 Postgres is there, it works:
+# command to start postgres
 
+## to start postgres:
 sudo /etc/init.d/postgresql start
+sudo -s
+su -postgres
+psql
+
+# command to stop postgres
+
+sudo /etc/init.d/postgresql stop
 
 ## Node JS
 
