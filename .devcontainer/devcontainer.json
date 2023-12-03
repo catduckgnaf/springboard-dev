@@ -67,6 +67,7 @@
 			},
 			"extensions": [
 				"esbenp.prettier-vscode",
+				"yoshinorin.current-file-path",
 				"VisualStudioExptTeam.vscodeintellicode",
 				"ms-python.python",
 				"mtxr.sqltools",
