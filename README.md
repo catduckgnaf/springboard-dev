@@ -20,17 +20,27 @@ It is probably not the best use of everyone's time to spend all day getting erro
 
 # Getting Started:
 
-I mean really if you don't know how to do these next steps, you should probably just quit and work and wendys.
-
-You can also open in vs code, download the repo zip file, unzip, right click the entire folder and open in VS code.  Follow the prompts and you are good to go! More instructions unlikely to come.
-Where it will set up everything for you!! You will have a complete development env
-
-Note, the first time it may take a while to open inside the container, but I am working on that too! 
-
+I mean really if you don't know how to do these next steps, you should probably just quit and work and McDonalds.
 You will have all the awesome extensions, correct versions of everything, some starter code, and very likely unhelpful sarcasm buried somewhere.
 
+Option 1. You can also download the [latest release](https://github.com/catduckgnaf/springboard-dev/releases/tag/0.1), unzip, right click the entire folder and open in VS code.  Follow the prompts and you are good to go! More instructions unlikely to come. It will take a while to compile, grab some coffee, and wait. I am working on "prebuilding" this to make it faster. After the first time it will load up basically right away.
+
+Option 2. Codespaces whether on the web or in your VS Code! You can open in "Codespaces" and you can view and code anywhere, as well as opening the prebuilt image directly in desktop vs code. This saves you all the time and waiting for compiling the package. This does have a cost associated with it (for me, not you, see below)
+
+So here you go!
 
 # Features:
+
+Go look how pretty it is!
+https://github.com/catduckgnaf/springboard-dev/blob/main/screenshot.png
+
+## Easy path management for not just WSL, but all users! 
+
+Your "workspace folder is the root of your container(springboard-dev folder). You can move the folder and open it up, and good to go! You can edit files from the download, download items to the folder, and they will be nicely contained (pun intended).
+
+Example: 
+Path in explorer ==  / C:\Users\Catduck\springboard-dev\ 
+path in container ==  /workspaces
 
 ## General VS Code Extensions and settings
 
@@ -52,6 +62,14 @@ ipython 7.34.0 by default
 ## Flask
 
 
+## command to start flask with development mode on
+FLASK_ENV=development flask run
+
+## command to stop flask
+flask stop
+
+requirements.txt includes:
+
 blinker==1.4
 Click==7.0
 Flask==1.0.2
@@ -64,8 +82,18 @@ Werkzeug==0.14.1
 
 ## Database / SQL / Postgres 
 
-I am looking into building Postgres and SQL into one development container. I am looking to see if there is an easy way to do that without interfering with the current set up. 
-This is next on the list  
+Postgres is there, it works:
+# command to start postgres
+
+## to start postgres:
+sudo /etc/init.d/postgresql start
+sudo -s
+su -postgres
+psql
+
+# command to stop postgres
+
+sudo /etc/init.d/postgresql stop
 
 ## Node JS
 
@@ -87,7 +115,8 @@ I have not gotten around to this yet, but if anyone wants to submit an issue, or
 
 # How can I help your awesome project?
 
-In addition to the notice below, please submit issues, or PRs with suggestions and things that are not working. Especially if Springboard updates coursework, or things are not working as expected. In the future. 
+In addition to the notice below, please submit issues, or PRs with suggestions and things that are not working. Especially if Springboard updates coursework, or things are not working as expected. Make an issue on github and I will try to replicate the issue and provide a fix. I also did not provide the "best" documentation for a true beginniner, so if anyone wants to submit tutorials, etc once again that is welcome!
+
 
 
 # Do I take donations?

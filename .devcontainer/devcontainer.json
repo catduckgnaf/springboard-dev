@@ -1,8 +1,10 @@
 {
-    "name": "Springboard Dev",
-    "build": {
-        "dockerfile": "./Dockerfile",
-        "context": "."
+    "name": "Springboard Dev Container",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "remoteEnv": {
+        "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
     },
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
@@ -17,12 +19,12 @@
         "ghcr.io/devcontainers/features/python:1.3.1": {
             "version": "3.7",
             "installTools": true
+		
         },
         "ghcr.io/devcontainers/features/github-cli:1.0.9": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/git:1.1.6": {},
-        
         "ghcr.io/devcontainers/features/node:1": {
             "nodeGypDependencies": true,
             "version": "18",
@@ -32,35 +34,60 @@
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/devcontainers/features/git",
+		"ghcr.io/devcontainers/features/github-cli",
         "ghcr.io/devcontainers/features/node",
-        "ghcr.io/devcontainers/features/python",
-        "ghcr.io/devcontainers/features/github-cli"
+        "ghcr.io/devcontainers/features/python"
     ],
     "customizations": {
         "vscode": {
-            "extensions": [
-				"mads-hartmann.bash-ide-vscode",
+            "settings": {
+                "sqltools.connections": [
+                    {
+                        "name": "PostgresSQL database container",
+                        "driver": "PostgreSQL",
+                        "previewLimit": 50,
+                        "server": "localhost",
+                        "port": 5432,
+                        "database": "postgresdb",
+                        "username": "postgres",
+                        "password": "postgres1234"
+                    }
+                ],
+                "cSpell.words": [
+                    "Distro",
+                    "Dockerfiles",
+                    "cgmanifest",
+                    "copyfiles",
+                    "devcontainer",
+                    "devcontainers",
+                    "dpkg",
+                    "npmignore",
+                    "redhat"
+                ]
+			},
+			"extensions": [
 				"esbenp.prettier-vscode",
+				"yoshinorin.current-file-path",
+				"VisualStudioExptTeam.vscodeintellicode",
 				"ms-python.python",
-				"ms-python.vscode-pylance",
-                "EditorConfig.EditorConfig",
+				"mtxr.sqltools",
+				"mtxr.sqltools-driver-pg",
+				"EditorConfig.EditorConfig",
 				"yzhang.markdown-all-in-one",
-				"DavidAnson.vscode-markdownlint",
 				"NoahSyn10.pydoctestbtn",
 				"dbaeumer.vscode-eslint",
-				"shd101wyy.markdown-preview-enhanced",
-				"bierner.github-markdown-preview",
 				"anseki.vscode-color",
-                "tal7aouy.rainbow-bracket",
-				"ritwickdey.LiveServer"
-	    ]
+				"ritwickdey.LiveServer",
+				"ms-python.pylint"
+			]
         }
     },
-    "forwardPorts": [
-        5000,
-        5432,
-        9000
-],
-    "postCreateCommand": "bash .devcontainer/run.sh",
+    "forwardPorts": [5000, 5432, 9000, 8000],
+    "mounts": [
+        "source=profile,target=/root,type=volume",
+        "source=projectname-bashhistory,target=/commandhistory,type=volume",
+        "target=/root/.vscode-server,type=volume"
+    ],
+    "postCreateCommand": "bash .devcontainer/library-scripts/run.sh",
     "remoteUser": "vscode"
 }

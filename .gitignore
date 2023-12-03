@@ -1,2 +1,4 @@
 ## To put coursework folder that is not in the repo
 coursework*
+.idea*
+*.pyc
