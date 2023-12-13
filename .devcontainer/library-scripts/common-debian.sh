@@ -160,24 +160,24 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
 
    # Install postgresql (and dependendencies to including postgresql) if not already installed (may be more recent than distro version)
 
-    # if ! type postgresql-14 > /dev/null 2>&1; then
-    # sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/# # sources.list.d/pgdg.list'
-    # wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-    # apt-get update
-    # apt-get -y install --no-install-recommends postgresql-14
-    #fi
+    if ! type postgresql-14 > /dev/null 2>&1; then
+    sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+    apt-get update
+    apt-get -y install --no-install-recommends postgresql-14
+    fi
 
-    # if ! type postgresql-client-14 > /dev/null 2>&1; then
-    # apt-get -y install --no-install-recommends postgresql-client-14
-    #fi
+    if ! type postgresql-client-14 > /dev/null 2>&1; then
+    apt-get -y install --no-install-recommends postgresql-client-14
+    fi
 
     #  if ! type postgresql-contrib > /dev/null 2>&1; then
     # apt-get -y install --no-install-recommends postgresql-contrib
     # fi
 
-    # if ! type postgresql-plpython3-14 > /dev/null 2>&1; then
-    #apt-get -y install --no-install-recommends postgresql-plpython3-14
-    # fi
+    if ! type postgresql-plpython3-14 > /dev/null 2>&1; then
+    apt-get -y install --no-install-recommends postgresql-plpython3-14
+    fi
 
     # Install pgadmin4 if not already installed (may be more recent than distro version)
     # if ! type pgadmin4 > /dev/null 2>&1; then
