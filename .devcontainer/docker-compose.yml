@@ -9,27 +9,19 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker-host.sock
       - ..:/workspace:cached
-     # - springboard-dev-bashhistory:/commandhistory
 
     entrypoint: /usr/local/share/docker-init.sh
     command: sleep infinity
-    # Uncomment the next four lines if you will use a ptrace-based debugger like C++, Go, and Rust.
-    # cap_add:
-    #   - SYS_PTRACE
-    # security_opt:
-    #   - seccomp:unconfined
 
+  db:
+    image: postgres:latest
+    restart: unless-stopped
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: postgres1234
 
-# volumes:
- # springboard-dev-bashhistory:
-
-services: 
-  app:
-    build: 
-      context: ..
-      dockerfile: .devcontainer/Dockerfile
-    ports: 
-      - 9000:9000
-    volumes: 
-      - ..:/workspace
-    command: sleep infinity
+volumes:
+  postgres-data:
