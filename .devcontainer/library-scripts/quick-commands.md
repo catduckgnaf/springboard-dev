@@ -20,6 +20,6 @@ FLASK_ENV=development flask run
 flask stop
 
 
-# to set up pgadmin4 (if you don't know, you don't need it, if you know you probably don't need it even more)
+# to set up pgadmin4 (if you don't know, you don't need it, if you know you what it is, then you probably don't need it)
 
 sudo /usr/pgadmin4/bin/setup-web.sh
