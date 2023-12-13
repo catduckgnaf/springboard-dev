@@ -19,6 +19,7 @@
         "ghcr.io/devcontainers/features/python:1.3.1": {
             "version": "3.7",
             "installTools": true
+		
         },
         "ghcr.io/devcontainers/features/github-cli:1.0.9": {
             "version": "latest"
@@ -32,14 +33,26 @@
     },
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/common-utils",
-        "ghcr.io/devcontainers/features/node",
-        "ghcr.io/devcontainers/features/python",
         "ghcr.io/devcontainers/features/git",
-        "ghcr.io/devcontainers/features/github-cli"
+		"ghcr.io/devcontainers/features/github-cli",
+        "ghcr.io/devcontainers/features/node",
+        "ghcr.io/devcontainers/features/python"
     ],
     "customizations": {
         "vscode": {
             "settings": {
+                "sqltools.connections": [
+                    {
+                        "name": "PostgresSQL database container",
+                        "driver": "PostgreSQL",
+                        "previewLimit": 50,
+                        "server": "localhost",
+                        "port": 5432,
+                        "database": "postgresdb",
+                        "username": "postgres",
+                        "password": "postgres1234"
+                    }
+                ],
                 "cSpell.words": [
                     "Distro",
                     "Dockerfiles",
@@ -51,20 +64,22 @@
                     "npmignore",
                     "redhat"
                 ]
-            },
-            "extensions": [
-                "esbenp.prettier-vscode",
-                "yoshinorin.current-file-path",
-                "VisualStudioExptTeam.vscodeintellicode",
-                "ms-python.python",
-                "EditorConfig.EditorConfig",
-                "yzhang.markdown-all-in-one",
-                "NoahSyn10.pydoctestbtn",
-                "dbaeumer.vscode-eslint",
-                "anseki.vscode-color",
-                "ritwickdey.LiveServer",
-                "ms-python.pylint"
-            ]
+			},
+			"extensions": [
+				"esbenp.prettier-vscode",
+				"yoshinorin.current-file-path",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"ms-python.python",
+				"mtxr.sqltools",
+				"mtxr.sqltools-driver-pg",
+				"EditorConfig.EditorConfig",
+				"yzhang.markdown-all-in-one",
+				"NoahSyn10.pydoctestbtn",
+				"dbaeumer.vscode-eslint",
+				"anseki.vscode-color",
+				"ritwickdey.LiveServer",
+				"ms-python.pylint"
+			]
         }
     },
     "forwardPorts": [5000, 5432, 9000, 8000],

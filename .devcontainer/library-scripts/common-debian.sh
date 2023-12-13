@@ -180,13 +180,13 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
     fi
 
     # Install pgadmin4 if not already installed (may be more recent than distro version)
-    if ! type pgadmin4 > /dev/null 2>&1; then
+    # if ! type pgadmin4 > /dev/null 2>&1; then
     curl -fsSL https://www.pgadmin.org/static/packages_pgadmin_org.pub | gpg --dearmor -o /etc/apt/trusted.gpg.d/pgadmin.gpg
     sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list'
-    sudo apt update
-    apt-get -y install --no-install-recommends pgadmin4
+   #  sudo apt update
+   #  apt-get -y install --no-install-recommends pgadmin4
 
-    fi
+    # fi
 
     PACKAGES_ALREADY_INSTALLED="true"
 
