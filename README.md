@@ -56,7 +56,7 @@ I plan to add some basic things there, but essentially its mostly just live serv
 ## Python
 
 python 3.7.17 by default! \
-ipython 7.34.0 by default \
+ipython 7.34.0 by default 
 
 
 ## Flask
@@ -70,14 +70,14 @@ flask stop
 
 requirements.txt includes:
 
-blinker==1.4
-Click==7.0
-Flask==1.0.2
-Flask-DebugToolbar==0.10.1
-itsdangerous==1.1.0
-Jinja2==2.10
-MarkupSafe==1.1.0
-Werkzeug==0.14.1
+blinker==1.4 \
+Click==7.0 \
+Flask==1.0.2 \
+Flask-DebugToolbar==0.10.1 \
+itsdangerous==1.1.0 \
+Jinja2==2.10 \
+MarkupSafe==1.1.0 \
+Werkzeug==0.14.1 
 
 
 ## Database / SQL / Postgres 
@@ -89,14 +89,10 @@ For reasons known only to me, (Just kidding, I am lazy) I did not set up a defau
 
 ## to start postgres:
 
-1. sudo service postgresql start
-2. sudo su postgres   ## (Ignore the error message)
+1. sudo service postgresql start \
+2. sudo su postgres   ## (Ignore the error message) \
 3. psql
-
-# command to stop postgres
-
-sudo service postgresql stop 
-
+4. profit
 
 ## Node JS
 
