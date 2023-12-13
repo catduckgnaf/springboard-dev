@@ -70,7 +70,8 @@
         { "port": 5000 },
         { "port": 5432 },
         { "port": 9000 },
-        { "port": 8000 }
+		{ "port": 9000 },
+        { "port": 5050 }
     ],
     "mounts": [
         "source=profile,target=/root,type=volume",

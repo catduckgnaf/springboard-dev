@@ -84,14 +84,19 @@ Werkzeug==0.14.1
 Postgres is there, it works:
 For reasons known only to me, (Just kidding, I am lazy) I did not set up a default user, or password. So just use postgres.
 
-# command to start postgres
-
 ## to start postgres:
 
 1. sudo service postgresql start \
 2. sudo su postgres   ## (Ignore the error message) \
 3. psql
 4. profit
+
+## PGAdmin
+
+Are you a windows user who is jealous of the videos where Colt has the Postgres app? Great news, PGAadmin is installed and even better it is already configured to work with the postgres database. https://www.pgadmin.org/ 
+
+type pgadmin4 in the terminal and it will open up in your browser. (after setting up a login)
+
 
 ## Node JS
 
