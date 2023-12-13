@@ -1,6 +1,6 @@
 {
     "name": "Springboard Dev Container",
-    "dockerComposeFile" : "docker-compose.yml",
+    "dockerComposeFile": "docker-compose.yml",
     "service": "app",
     "workspaceFolder": "/workspace",
     "remoteEnv": {
@@ -20,7 +20,7 @@
             "version": "3.7",
             "installTools": true
         },
-        "ghcr.io/devcontainers/features/github-cli:1.0.8": {
+        "ghcr.io/devcontainers/features/github-cli:1.0.9": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/git:1.1.6": {},
@@ -67,13 +67,7 @@
             ]
         }
     },
-    "forwardPorts": [
-        { "port": 5000 },
-        { "port": 5432 },
-        { "port": 9000 },
-		{ "port": 9000 },
-        { "port": 5050 }
-    ],
+    "forwardPorts": [5000, 5432, 9000, 8000],
     "mounts": [
         "source=profile,target=/root,type=volume",
         "source=projectname-bashhistory,target=/commandhistory,type=volume",

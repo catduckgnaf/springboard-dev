@@ -50,6 +50,12 @@ fi
 # Ensure apt is in non-interactive to avoid prompts
 export DEBIAN_FRONTEND=noninteractive
 
+# Add the PostgreSQL repository
+# echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
+
+# Import the PostgreSQL GPG key
+# wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+
 # Function to call apt-get if needed
 apt_get_update_if_needed()
 {
@@ -157,23 +163,30 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
     if ! type postgresql-14 > /dev/null 2>&1; then
     sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-    ## add pgadmin
-    wget --quiet -O - https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add -
-    sh -c ' echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" | sudo tee /etc/apt/sources.list.d/pgadmin4.list'
     apt-get update
     apt-get -y install --no-install-recommends postgresql-14
-    apt-get -y install --no-install-recommends pgadmin4
-    chmod +x ./devcontainer/library-scripts/pgadmin.sh
     fi
 
     if ! type postgresql-client-14 > /dev/null 2>&1; then
     apt-get -y install --no-install-recommends postgresql-client-14
     fi
 
+    #  if ! type postgresql-contrib > /dev/null 2>&1; then
+    # apt-get -y install --no-install-recommends postgresql-contrib
+    # fi
 
     if ! type postgresql-plpython3-14 > /dev/null 2>&1; then
     apt-get -y install --no-install-recommends postgresql-plpython3-14
     fi
+
+    # Install pgadmin4 if not already installed (may be more recent than distro version)
+    # if ! type pgadmin4 > /dev/null 2>&1; then
+    curl -fsSL https://www.pgadmin.org/static/packages_pgadmin_org.pub | gpg --dearmor -o /etc/apt/trusted.gpg.d/pgadmin.gpg
+    sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list'
+   #  sudo apt update
+   #  apt-get -y install --no-install-recommends pgadmin4
+
+    # fi
 
     PACKAGES_ALREADY_INSTALLED="true"
 
