@@ -12,3 +12,4 @@ services:
 
     entrypoint: /usr/local/share/docker-init.sh
     command: sleep infinity
+  
