@@ -38,7 +38,7 @@ So here you go!
 Your "workspace folder is the root of your container(springboard-dev folder). You can move the folder and open it up, and good to go! You can edit files from the download, download items to the folder, and they will be nicely contained (pun intended).
 
 Example: 
-Path in explorer ==  / C:\Users\Catduck\springboard-dev\ 
+Path in explorer ==  / C:\Users\Catduck\springboard-dev\  \
 path in container ==  /workspaces
 
 ## General VS Code Extensions and settings
