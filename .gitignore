@@ -2,3 +2,4 @@
 coursework*
 .idea*
 *.pyc
+.devcontainer/tmp.Dockerfile
