@@ -86,14 +86,17 @@ Postgres is there, it works:
 # command to start postgres
 
 ## to start postgres:
-sudo /etc/init.d/postgresql start
-sudo -s
-su postgres
-psql
+
+1. sudo service postgresql start 
+## or sudo /etc/init.d/postgresql start
+2. sudo su postgres  ## (Ignore the error message)
+3. psql
 
 # command to stop postgres
 
-sudo /etc/init.d/postgresql stop
+1. sudo service postgresql stop 
+## or sudo /etc/init.d/postgresql stop
+
 
 ## Node JS
 
