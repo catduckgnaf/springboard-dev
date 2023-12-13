@@ -47,7 +47,7 @@
                         "name": "PostgresSQL database container",
                         "driver": "PostgreSQL",
                         "previewLimit": 50,
-                        "server": "127.0.0.1",
+                        "server": "localhost",
                         "port": 5432,
                         "database": "postgresdb",
                         "username": "postgres",
