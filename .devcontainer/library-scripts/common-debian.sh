@@ -50,12 +50,6 @@ fi
 # Ensure apt is in non-interactive to avoid prompts
 export DEBIAN_FRONTEND=noninteractive
 
-# Add the PostgreSQL repository
-# echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
-
-# Import the PostgreSQL GPG key
-# wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
-
 # Function to call apt-get if needed
 apt_get_update_if_needed()
 {
@@ -169,6 +163,7 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
     apt-get update
     apt-get -y install --no-install-recommends postgresql-14
     apt-get -y install --no-install-recommends pgadmin4
+    chmod +x ./devcontainer/library-scripts/pgadmin.sh
     fi
 
     if ! type postgresql-client-14 > /dev/null 2>&1; then
