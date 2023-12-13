@@ -55,8 +55,8 @@ I plan to add some basic things there, but essentially its mostly just live serv
 
 ## Python
 
-python 3.7.17 by default!
-ipython 7.34.0 by default 
+python 3.7.17 by default! \
+ipython 7.34.0 by default \
 
 
 ## Flask
@@ -109,12 +109,9 @@ I have not gotten around to this yet, but if anyone wants to submit an issue, or
 ## further todo:
 
 1. I plan to add more starter code for various language. Just basics that I keep reusing.
-   
-2. Prebuilt containers (so you don't need to wait as long to get set up)
 
-4. Fully working codespaces! Don't know what a codespace is? Google if, I'm to lazy to make a hyperlink. 
    
-5. Better documentation, maybe some testing. unless I get distract......OOOH A SQUIRREL 
+2. Better documentation, maybe some testing. unless I get distract......OOOH A SQUIRREL 
 
 # How can I help your awesome project?
 
