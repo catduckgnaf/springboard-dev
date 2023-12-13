@@ -83,19 +83,19 @@ Werkzeug==0.14.1
 ## Database / SQL / Postgres 
 
 Postgres is there, it works:
+For reasons known only to me, (Just kidding, I am lazy) I did not set up a default user, or password. So just use postgres.
+
 # command to start postgres
 
 ## to start postgres:
 
-1. sudo service postgresql start 
-## or sudo /etc/init.d/postgresql start
-2. sudo su postgres  ## (Ignore the error message)
+1. sudo service postgresql start
+2. sudo su postgres   ## (Ignore the error message)
 3. psql
 
 # command to stop postgres
 
-1. sudo service postgresql stop 
-## or sudo /etc/init.d/postgresql stop
+sudo service postgresql stop 
 
 
 ## Node JS
