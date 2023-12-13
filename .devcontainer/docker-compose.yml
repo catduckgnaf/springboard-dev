@@ -22,6 +22,5 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_DB: postgres
       POSTGRES_PASSWORD: postgres1234
-
 volumes:
   postgres-data:
