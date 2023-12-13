@@ -5,7 +5,7 @@
 ## to start postgres:
 sudo /etc/init.d/postgresql start
 sudo -s
-su -postgres
+su postgres
 psql
 
 # command to stop postgres
