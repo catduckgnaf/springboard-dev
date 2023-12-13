@@ -185,6 +185,7 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
     sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list'
     sudo apt update
     apt-get -y install --no-install-recommends pgadmin4
+    
     fi
 
     PACKAGES_ALREADY_INSTALLED="true"
