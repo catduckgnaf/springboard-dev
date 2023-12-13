@@ -1,6 +1,5 @@
 {
     "name": "Springboard Dev Container",
-    "Dockerfile": "Dockerfile",
     "service": "app",
     "workspaceFolder": "/workspace",
     "remoteEnv": {
@@ -20,7 +19,7 @@
             "version": "3.7",
             "installTools": true
         },
-        "ghcr.io/devcontainers/features/github-cli:1.0.9": {
+        "ghcr.io/devcontainers/features/github-cli:1.0.11": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/git:1.1.6": {},
