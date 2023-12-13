@@ -23,7 +23,7 @@ services:
       - postgres-data:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_DB: postgres
+      POSTGRES_DB: postgresdb
       POSTGRES_PASSWORD: postgres1234
 volumes:
   postgres-data:
