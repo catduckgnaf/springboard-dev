@@ -67,7 +67,12 @@
             ]
         }
     },
-    "forwardPorts": [5000, 5432, 9000, 8000],
+    "forwardPorts": [
+        { "port": 5000 },
+        { "port": 5432 },
+        { "port": 9000 },
+        { "port": 8000 }
+    ],
     "mounts": [
         "source=profile,target=/root,type=volume",
         "source=projectname-bashhistory,target=/commandhistory,type=volume",
