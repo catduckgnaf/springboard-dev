@@ -50,12 +50,6 @@ fi
 # Ensure apt is in non-interactive to avoid prompts
 export DEBIAN_FRONTEND=noninteractive
 
-# Add the PostgreSQL repository
-# echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
-
-# Import the PostgreSQL GPG key
-# wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
-
 # Function to call apt-get if needed
 apt_get_update_if_needed()
 {
@@ -179,14 +173,12 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
     apt-get -y install --no-install-recommends postgresql-plpython3-14
     fi
 
-    # Install pgadmin4 if not already installed (may be more recent than distro version)
-    # if ! type pgadmin4 > /dev/null 2>&1; then
+    # Install pgadmin4 if not already installed
     curl -fsSL https://www.pgadmin.org/static/packages_pgadmin_org.pub | gpg --dearmor -o /etc/apt/trusted.gpg.d/pgadmin.gpg
     sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list'
-   #  sudo apt update
-   #  apt-get -y install --no-install-recommends pgadmin4
-
-    # fi
+    sudo apt update
+    sudo apt-get -y install --no-install-recommends pgadmin4
+    # sudo chmod +x ./pgadmin_install.sh
 
     PACKAGES_ALREADY_INSTALLED="true"
 
