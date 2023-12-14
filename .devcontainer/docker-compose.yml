@@ -12,3 +12,33 @@ services:
 
     entrypoint: /usr/local/share/docker-init.sh
     command: sleep infinity
+
+    depends_on:
+      - db
+
+  db:
+    image: postgres:14.10
+    restart: unless-stopped
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgresdb
+      POSTGRES_PASSWORD: postgres1234
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    restart: always
+    ports:
+      - "8888:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: pgadmin@springboard.dev
+      PGADMIN_DEFAULT_PASSWORD: pgadmin1234
+      PGADMIN_DISABLE_POSTFIX: true
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+
+volumes:
+  postgres-data:
+  pgadmin-data:

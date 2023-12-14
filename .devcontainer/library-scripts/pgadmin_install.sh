@@ -17,5 +17,6 @@ source pgadmin4/bin/activate
 # Install pgAdmin4 using pip
 pip install pgadmin4
 
+
 # Output a message indicating successful installation
 echo "pgAdmin4 installation completed."
