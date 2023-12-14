@@ -74,4 +74,5 @@
         "/root/.vscode-server"
     ],
     "postCreateCommand": "bash .devcontainer/library-scripts/run.sh",
-    "remoteUser":
+    "remoteUser": "vscode"
+}
