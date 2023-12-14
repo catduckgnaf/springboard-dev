@@ -13,20 +13,13 @@ services:
     entrypoint: /usr/local/share/docker-init.sh
     command: sleep infinity
 
-    # Assuming you want to connect to a service named "db"
-    depends_on:
-      - db
-    network_mode: service:db
+    ports:
+      - "8888:80"  # Adjust the port as needed
 
-  db:
-    image: postgres:14.10
-    restart: unless-stopped
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_DB: postgresdb
-      POSTGRES_PASSWORD: postgres1234
+      PGADMIN_DEFAULT_EMAIL: pgadmin@springboard.dev
+      PGADMIN_DEFAULT_PASSWORD: pgadmin1234
+      PGADMIN_DISABLE_POSTFIX: true
 
   pgadmin:
     image: dpage/pgadmin4
@@ -42,5 +35,4 @@ services:
       - pgadmin-data:/var/lib/pgadmin
 
 volumes:
-  postgres-data:
   pgadmin-data:
