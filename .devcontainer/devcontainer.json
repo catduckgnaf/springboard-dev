@@ -1,5 +1,6 @@
 {
     "name": "Springboard Dev Container",
+	"dockerComposeFile": "docker-compose.yml",
     "service": "app",
     "workspaceFolder": "/workspace",
     "remoteEnv": {
