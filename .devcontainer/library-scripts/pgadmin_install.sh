@@ -1,4 +1,6 @@
 #!/bin/bash
+# Output a message indicating starting installation
+echo "pgAdmin4 installation starting, please wait."
 
 # Create directories
 sudo mkdir -p /var/lib/pgadmin

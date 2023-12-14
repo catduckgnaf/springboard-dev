@@ -1,4 +1,5 @@
 ## To put coursework folder that is not in the repo
 coursework*
+pgadmin4*
 .idea*
 *.pyc
