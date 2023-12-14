@@ -13,14 +13,6 @@ services:
     entrypoint: /usr/local/share/docker-init.sh
     command: sleep infinity
 
-    ports:
-      - "8888:80"  # Adjust the port as needed
-
-    environment:
-      PGADMIN_DEFAULT_EMAIL: pgadmin@springboard.dev
-      PGADMIN_DEFAULT_PASSWORD: pgadmin1234
-      PGADMIN_DISABLE_POSTFIX: true
-
   pgadmin:
     image: dpage/pgadmin4
     container_name: pgadmin4_container
