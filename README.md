@@ -83,8 +83,12 @@ Werkzeug==0.14.1
 
 ## Database / SQL / Postgres 
 
-Postgres is there, it works:
-For reasons known only to me, (Just kidding, I am lazy) I did not set up a default user, or password. So just use postgres.
+Postgres 14.10 by default! \
+username: postgres \
+password: postgres1234 \
+db: postgresdb
+pgadmin: pgadmin@springboard.dev
+pgadmin password: pgadmin1234
 
 ## to start postgres:
 
@@ -97,7 +101,7 @@ For reasons known only to me, (Just kidding, I am lazy) I did not set up a defau
 
 Are you a windows user who is jealous of the videos where Colt has the Postgres app? Great news, PGAadmin is installed and even better it is already configured to work with the postgres database. https://www.pgadmin.org/ 
 
-type pgadmin4 in the terminal and it will open up in your browser. (after setting up a login)
+type pgadmin4 in the terminal and it will open up in your browser. 
 
 
 ## Node JS
