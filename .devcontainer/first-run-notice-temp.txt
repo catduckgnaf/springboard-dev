@@ -1,4 +1,5 @@
  Welcome to Catducks Springboard Dev Containter!
  You have succesfully installed the Springboard Dev Container. 
-   - It includes runtimes and tools for Python, Node.js, Docker, and more. 
+   - It includes runtimes and tools for Python, Node.js, Docker, sarcasm and more. 
    - Correct dependencies and settings, plus some useful extensions for VS Code.
+   - To install pgadmin4 run .devcontainer/library-scripts/pgadmin4_install.sh
