@@ -11,3 +11,7 @@ username: postgres
 3. psql 
 4. \password postgres ## (set password to postgres1234) 
 5. profit
+
+## to install pgadmin4 (if you know you know)
+
+sudo /usr/pgadmin4/bin/setup-web.sh
