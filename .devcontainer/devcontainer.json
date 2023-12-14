@@ -1,6 +1,5 @@
 {
     "name": "Springboard Dev Container",
-    "dockerComposeFile": "docker-compose.yml",
     "service": "app",
     "workspaceFolder": "/workspace",
     "remoteEnv": {
@@ -20,7 +19,7 @@
             "version": "3.7",
             "installTools": true
         },
-        "ghcr.io/devcontainers/features/github-cli:1.0.9": {
+        "ghcr.io/devcontainers/features/github-cli:1.0.11": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/git:1.1.6": {},
@@ -67,11 +66,16 @@
             ]
         }
     },
-    "forwardPorts": [5000, 5432, 9000, 8000, 8888],
+    "forwardPorts": [
+        { "port": 5000 },
+        { "port": 5432 },
+        { "port": 9000 },
+        { "port": 8000 }
+    ],
     "mounts": [
-        "profile:/root",
-        "projectname-bashhistory:/commandhistory",
-        "/root/.vscode-server"
+        "source=profile,target=/root,type=volume",
+        "source=projectname-bashhistory,target=/commandhistory,type=volume",
+        "target=/root/.vscode-server,type=volume"
     ],
     "postCreateCommand": "bash .devcontainer/library-scripts/run.sh",
     "remoteUser": "vscode"
