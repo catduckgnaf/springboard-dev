@@ -171,9 +171,12 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
     apt-get -y install --no-install-recommends postgresql-client-14
     fi
 
-    #  if ! type postgresql-contrib > /dev/null 2>&1; then
-    # apt-get -y install --no-install-recommends postgresql-contrib
-    # fi
+    if ! type pgadmin4 > /dev/null 2>&1; then
+    curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+    sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+    sudo apt -y install pgadmin4
+
+    fi
 
     if ! type postgresql-plpython3-14 > /dev/null 2>&1; then
     apt-get -y install --no-install-recommends postgresql-plpython3-14
