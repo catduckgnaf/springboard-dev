@@ -86,23 +86,22 @@ Werkzeug==0.14.1
 Postgres 14.10 by default! \
 username: postgres \
 password: postgres1234 \
-db: postgresdb
-pgadmin: pgadmin@springboard.dev
-pgadmin password: pgadmin1234
+
 
 ## to start postgres:
 
 1. sudo service postgresql start \
-2. sudo su postgres   ## (Ignore the error message) \
+2. sudo su postgres ## (Ignore the error message) \
 3. psql
 4. profit
 
 ## PGAdmin
 
-Are you a windows user who is jealous of the videos where Colt has the Postgres app? Great news, PGAadmin is installed and even better it is already configured to work with the postgres database. https://www.pgadmin.org/ 
+Are you a windows user who is jealous of the videos where Colt has the Postgres app? Great news, PGAadmin is installed and even better it is already configured to work with the postgres database. 
 
-type pgadmin4 in the terminal and it will open up in your browser. 
-
+pgadmin: pgadmin@springboard.dev
+pgadmin password: pgadmin1234
+go to http://127.0.0.1:8888/ and login with the credentials above.
 
 ## Node JS
 
