@@ -12,7 +12,7 @@ username: postgres
 4. \password postgres ## (set password to postgres1234) \
 5. profit
 
-## PGAdmin
+## PGAdmin 
 
 Are you a windows user who is jealous of the videos where Colt has the Postgres app? Great news, PGAadmin is installed and even better it is already configured to work with the postgres database. 
 
