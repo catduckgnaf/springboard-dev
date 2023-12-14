@@ -103,7 +103,13 @@ pgadmin: pgadmin@springboard.dev \
 pgadmin password: pgadmin1234 \
 go to http://127.0.0.1:8888/ and login with the credentials above. \
 
-Remember how you had to set the password for postgres? Use that password to add the new server
+Remember how you had to set the password for postgres? Use that password to add the new server after logging in
+
+Host Name: 127.0.0.1
+Port: 5432
+database: postgres
+username: postgres
+password: postgres1234
 
 ## Node JS
 
