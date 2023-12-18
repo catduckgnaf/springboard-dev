@@ -40,18 +40,6 @@
     "customizations": {
         "vscode": {
             "settings": {
-                "sqltools.connections": [
-                    {
-                        "name": "PostgresSQL database container",
-                        "driver": "PostgreSQL",
-                        "previewLimit": 50,
-                        "server": "127.0.0.1",
-                        "port": 5432,
-                        "database": "postgres",
-                        "username": "postgres",
-                        "password": "postgres1234"
-                    }
-                ],
                 "cSpell.words": [
                     "Distro",
                     "Dockerfiles",
@@ -75,9 +63,7 @@
                 "dbaeumer.vscode-eslint",
                 "anseki.vscode-color",
                 "ritwickdey.LiveServer",
-                "ms-python.pylint",
-                "mtxr.sqltools",
-                "mtxr.sqltools-driver-pg"
+                "ms-python.pylint"
             ]
         }
     },
