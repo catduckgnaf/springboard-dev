@@ -171,10 +171,6 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
     apt-get -y install --no-install-recommends postgresql-client-14
     fi
 
-    if ! type pgadmin4 > /dev/null 2>&1; then
-    mkdir /var/lib/pgadmin | mkdir /var/log/pgadmin    
-    fi
-
     if ! type postgresql-plpython3-14 > /dev/null 2>&1; then
     apt-get -y install --no-install-recommends postgresql-plpython3-14
     fi
