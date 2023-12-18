@@ -172,12 +172,7 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
     fi
 
     if ! type pgadmin4 > /dev/null 2>&1; then
-    sudo mkdir /var/lib/pgadmin | sudo mkdir /var/log/pgadmin
-    sudo chown $USERNAME /var/lib/pgadmin | sudo chown $USERNAME /var/log/pgadmin
-    python3 -m venv pgadmin4 
-    source pgadmin4/bin/activate
-    pip install pgadmin4
-    
+    mkdir /var/lib/pgadmin | mkdir /var/log/pgadmin    
     fi
 
     if ! type postgresql-plpython3-14 > /dev/null 2>&1; then
