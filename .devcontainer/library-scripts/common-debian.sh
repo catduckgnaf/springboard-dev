@@ -172,10 +172,12 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
     fi
 
     if ! type pgadmin4 > /dev/null 2>&1; then
-    curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
-    sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
-    sudo apt -y install pgadmin4
-
+    sudo mkdir /var/lib/pgadmin | sudo mkdir /var/log/pgadmin
+    sudo chown $USERNAME /var/lib/pgadmin | sudo chown $USERNAME /var/log/pgadmin
+    python3 -m venv pgadmin4 
+    source pgadmin4/bin/activate
+    pip install pgadmin4
+    
     fi
 
     if ! type postgresql-plpython3-14 > /dev/null 2>&1; then
