@@ -1,6 +1,6 @@
 {
     "name": "Springboard Dev Container",
-	"dockerComposeFile": "docker-compose.yml",
+    "dockerComposeFile": "docker-compose.yml",
     "service": "app",
     "workspaceFolder": "/workspace",
     "remoteEnv": {
@@ -40,12 +40,12 @@
     "customizations": {
         "vscode": {
             "settings": {
-				"sqltools.connections": [
+                "sqltools.connections": [
                     {
                         "name": "PostgresSQL database container",
                         "driver": "PostgreSQL",
                         "previewLimit": 50,
-                        "server": "localhost",
+                        "server": "127.0.0.1",
                         "port": 5432,
                         "database": "postgres",
                         "username": "postgres",
@@ -76,8 +76,8 @@
                 "anseki.vscode-color",
                 "ritwickdey.LiveServer",
                 "ms-python.pylint",
-				"mtxr.sqltools",
-				"mtxr.sqltools-driver-pg"
+                "mtxr.sqltools",
+                "mtxr.sqltools-driver-pg"
             ]
         }
     },
