@@ -5,7 +5,7 @@ pip install -r .devcontainer/requirements.txt
 
 echo 'installing pgadmin4, last step'
 sudo mkdir -p /var/lib/pgadmin /var/log/pgadmin /etc/pgadmin
-cp .devcontainer/pgadmin4.py /etc/pgadmin/config_system.py
+sudo cp .devcontainer/pgadmin4.py /etc/pgadmin/config_system.py
 sudo chown $USER:$USER /var/lib/pgadmin /var/log/pgadmin
 
 # Install pgadmin4 using pipx
