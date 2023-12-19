@@ -1,5 +1,5 @@
 echo 'install final requirements'
-pip install -r requirements.txt
+pip install -r .devcontainer/requirements.txt
 clear
 uname -r
 flask --version
