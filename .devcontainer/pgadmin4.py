@@ -326,7 +326,7 @@ MAX_SESSION_IDLE_TIME = 60
 # dialect+driver://username:password@host:port/database
 #
 # PostgreSQL:
-postgresql://postgres:postgres1234@127.0.0.1:5432/postgres
+# postgresql://postgres:postgres1234@127.0.0.1:5432/postgres
 # Specify Schema Name
 # postgresql://username:password@host:port/database?options=-csearch_path=pgadmin
 # Using PGPASS file
