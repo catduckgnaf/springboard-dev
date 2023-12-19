@@ -11,7 +11,6 @@ ARG USE_MOBY="true"
 
 
 
-# Enable new "BUILDKIT" mode for Docker CLI
 ENV DOCKER_BUILDKIT=1
 
 # Install needed packages and setup non-root user. Use a separate RUN statement to add your
@@ -26,17 +25,10 @@ RUN apt-get update \
     && /bin/bash /tmp/library-scripts/docker-debian.sh "${ENABLE_NONROOT_DOCKER}" "/var/run/docker-host.sock" "/var/run/docker.sock" "${USERNAME}" \
     # Clean up
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/
+RUN pipx install -f -r requirements.txt
 
-# Setting the ENTRYPOINT to docker-init.sh will configure non-root access 
-# to the Docker socket. The script will also execute CMD as needed.
 ENTRYPOINT [ "/usr/local/share/docker-init.sh" ]
 CMD [ "sleep", "infinity" ]
-
-# RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.bash_history" \
-#    && mkdir /commandhistory \
-#    && touch /commandhistory/.bash_history \
-#    && chown -R $USERNAME /commandhistory \
-#    && echo "$SNIPPET" >> "/home/$USERNAME/.bashrc"
 
 ENV LANG="C.UTF-8"
 
