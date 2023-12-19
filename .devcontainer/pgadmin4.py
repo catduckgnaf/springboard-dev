@@ -523,7 +523,7 @@ COOKIE_DEFAULT_DOMAIN = None
 SESSION_COOKIE_DOMAIN = None
 SESSION_COOKIE_SAMESITE = 'Lax'
 SESSION_COOKIE_SECURE = False
-SESSION_COOKIE_HTTPONLY = True
+SESSION_COOKIE_HTTPONLY = False
 
 #########################################################################
 # Skip storing session in files and cache for specific paths
