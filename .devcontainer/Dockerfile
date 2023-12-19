@@ -30,8 +30,6 @@ RUN apt-get update \
 ENTRYPOINT [ "/usr/local/share/docker-init.sh" ]
 CMD [ "sleep", "infinity" ]
 
-RUN pipx install pgadmin4
-
 ENV LANG="C.UTF-8"
 
 ENV PYTHONUNBUFFERED 1
