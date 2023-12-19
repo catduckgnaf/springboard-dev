@@ -1,5 +1,11 @@
 echo 'install final requirements'
 pip install -r .devcontainer/requirements.txt
+echo 'installing pgadmin4, last step'
+sudo mkdir /var/lib/pgadmin
+sudo mkdir /var/log/pgadmin
+sudo chown $USER /var/lib/pgadmin
+sudo chown $USER /var/log/pgadmin
+pipx install pgadmin4
 clear
 uname -r
 flask --version
