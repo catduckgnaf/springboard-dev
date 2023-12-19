@@ -32,7 +32,6 @@ RUN apt-get update \
 ENTRYPOINT [ "/usr/local/share/docker-init.sh" ]
 CMD [ "sleep", "infinity" ]
 
-RUN pipx install pgadmin4
 # RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.bash_history" \
 #    && mkdir /commandhistory \
 #    && touch /commandhistory/.bash_history \
