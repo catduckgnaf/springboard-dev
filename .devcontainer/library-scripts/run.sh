@@ -1,6 +1,3 @@
-echo 'Installing Springboard SEC pip requirements; it will not take long.'
-pip install -r .devcontainer/requirements.txt
-clear
 echo 'pre-setup for pgadmin4, this is the last step'
 sudo mkdir /var/lib/pgadmin
 sudo mkdir /var/log/pgadmin
