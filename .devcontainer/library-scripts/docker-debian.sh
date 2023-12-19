@@ -230,10 +230,6 @@ else
     fi
 fi
 
-if ! type pgadmin > /dev/null 2>&1; then
-    pipx install pgadmin4
-    fi
-
 # Install docker-compose switch if not already installed - https://github.com/docker/compose-switch#manual-installation
 current_v1_compose_path="$(which docker-compose)"
 target_v1_compose_path="$(dirname "${current_v1_compose_path}")/docker-compose-v1"
