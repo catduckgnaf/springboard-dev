@@ -39,18 +39,6 @@
     ],
     "customizations": {
         "vscode": {
-            "settings": {
-                "cSpell.words": [
-                    "Distro",
-                    "Dockerfiles",
-                    "cgmanifest",
-                    "copyfiles",
-                    "devcontainer",
-                    "devcontainers",
-                    "dpkg",
-                    "npmignore",
-                    "redhat"
-                ]
             },
             "extensions": [
                 "esbenp.prettier-vscode",
