@@ -3,3 +3,4 @@ coursework*
 pgadmin4*
 .idea*
 *.pyc
+*tmp.Dockerfile*
