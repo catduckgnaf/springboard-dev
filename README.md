@@ -96,6 +96,14 @@ username: postgres
 5. profit
 
 
+## pgadmin 4
+
+1. pgadmin4 is almost good to go, you just need to set the password to postgres1234 (see above postgres instructions)
+2. type "pipx install pgadmin4" (YES PIPX NOT PIP.) all other configuration is done, but i figured people can do this one step on their own. 
+3. type "pgadmin4" make up a username and password
+4. connect via http://localhost:5050/ or try 127.0.0.1:5050 if that doesn't work.
+5. create a new server, name it whatever you want, host is localhost (or 127.0.0.1), port is 5432, username is postgres, password is postgres1234 (assuming you followed the above instructions)
+
 ## Node JS
 
 Hey, this is way better then outdated Jquery, thank you springboard! (beyond the sarcastic comment its a work in progress)
