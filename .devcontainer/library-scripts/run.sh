@@ -1,8 +1,5 @@
-echo 'pre-setup for pgadmin4, this is the last step'
-sudo mkdir /var/lib/pgadmin
-sudo mkdir /var/log/pgadmin
-sudo chown $USER /var/lib/pgadmin
-sudo chown $USER /var/log/pgadmin
+echo 'install final requirements'
+pip install -r requirements.txt
 clear
 uname -r
 flask --version
