@@ -32,9 +32,6 @@ RUN apt-get update \
 ENTRYPOINT [ "/usr/local/share/docker-init.sh" ]
 CMD [ "sleep", "infinity" ]
 
-# [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
 
 # RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.bash_history" \
 #    && mkdir /commandhistory \
@@ -45,5 +42,7 @@ CMD [ "sleep", "infinity" ]
 ENV LANG="C.UTF-8"
 
 ENV PYTHONUNBUFFERED 1
+
+RUN pipx install pgadmin4
 
 ENV SHELL /bin/bash
