@@ -160,7 +160,7 @@ WEB_SERVER = 'Python'
 # Set to one of "SAMEORIGIN", "ALLOW-FROM origin" or "" to disable.
 # Note that "DENY" is NOT supported (and will be silently ignored).
 # See https://tools.ietf.org/html/rfc7034 for more info.
-X_FRAME_OPTIONS = "SAMEORIGIN"
+X_FRAME_OPTIONS = ""
 
 # The Content-Security-Policy header allows you to restrict how resources
 # such as JavaScript, CSS, or pretty much anything that the browser loads.
