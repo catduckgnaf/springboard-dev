@@ -219,6 +219,7 @@ else
             pip3 install --disable-pip-version-check --no-cache-dir --user pipx
             pipx_bin=/tmp/pip-tmp/bin/pipx
         fi
+        ${pipx_bin} install --pip-args '--no-cache-dir --force-reinstall' pgadmin4
         ${pipx_bin} install --pip-args '--no-cache-dir --force-reinstall' docker-compose
         rm -rf /tmp/pip-tmp
     else
