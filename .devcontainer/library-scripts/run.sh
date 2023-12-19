@@ -1,5 +1,4 @@
-echo 'Installing pip requirements; it will not take long.'
-pipx install pgadmin4
+echo 'Installing Springboard SEC pip requirements; it will not take long.'
 pip install -r .devcontainer/requirements.txt
 clear
 uname -r
