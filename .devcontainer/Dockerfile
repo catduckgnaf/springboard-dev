@@ -30,7 +30,7 @@ RUN apt-get update \
 ENTRYPOINT [ "/usr/local/share/docker-init.sh" ]
 CMD [ "sleep", "infinity" ]
 
-RUN pipx install -f pgadmin4
+RUN pipx install pgadmin4
 
 ENV LANG="C.UTF-8"
 
