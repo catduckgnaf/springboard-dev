@@ -11,7 +11,6 @@ sudo chown $USER:$USER /var/lib/pgadmin /var/log/pgadmin
 # Install pgadmin4 using pipx
 pipx install pgadmin4
 
-clear
 uname -r
 flask --version
 
