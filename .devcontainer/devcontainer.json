@@ -39,7 +39,6 @@
     ],
     "customizations": {
         "vscode": {
-            },
             "extensions": [
                 "esbenp.prettier-vscode",
                 "yoshinorin.current-file-path",
